@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Njeru Brian Mwenda | Full-Stack Developer & ICT Specialist</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'GA_MEASUREMENT_ID');
+    </script>
+
+    <!-- Google Translate -->
+<script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+      pageLanguage: 'en',
+      includedLanguages: 'sw',
+      layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+    }, 'google_translate_element');
+  }
+</script>
+
+<!-- Load Google Translate -->
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+</head>
+
+<body>
+    <!-- Scroll Progress Indicator -->
+    <div class="scroll-progress"></div>
+
+    <div class="portfolio-container">
+        <!-- Header Section -->
+        <header class="header">
+            <!-- Theme Toggle -->
+            <button id="theme-toggle" class="theme-btn">
+                <i class="fas fa-moon"></i>
+            </button>
+            <!-- <nav> was never opened, so we remove the closing tag -->
+
+            <div class="hero">
+                <div id="google_translate_element"></div>
+
+                <h1>Njeru Brian Mwenda</h1>
+                <p class="tagline">Full-Stack Developer & ICT Specialist</p>
+
+                <!-- Download Resume Button -->
+                <a href="/path/to/resume.pdf" download class="resume-btn">
+                    <i class="fas fa-download"></i> Download Resume
+                </a>
+            </div>
+        </header>
+
+        <!-- Main Content -->        <!-- Main Content -->
+        <main class="main-content">
+            <!-- About Section -->
+            <section id="about" class="profile-section">
+                <div class="profile-pic">
+                    <img src="WhatsApp Image 2025-07-04 at 09.40.42.jpeg" alt="Njeru Brian Mwenda">
+                </div>
+                <div class="profile-info">
+                    <h2>About Me</h2>
+                    <p>
+                        I'm a passionate Full-Stack Developer and ICT Specialist with expertise in building responsive web applications and maintaining robust network infrastructure. With a strong foundation in both development and technical support, I bridge the gap between software solutions and hardware implementation.
+                    </p>
+                    <p>
+                        My approach combines technical precision with creative problem-solving to deliver comprehensive digital solutions that are both user-friendly and technically sound.
+                    </p>
+                    <div class="education">
+                        <h3>Education</h3>
+                        <p><strong>Chuka University</strong> - BSc in Applied Computer Science</p>
+                        <p><strong>Murang'a University</strong> - Internship Program</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Skills Section -->
+            <section id="skills" class="skills-section">
+                <h2>My Skills</h2>
+                <div class="skills-container">
+                    <div class="skill-category">
+                        <h3><i class="fas fa-code"></i> Technical Skills</h3>
+                        <!-- Skill Bars -->
+                        <div class="skill-bar-container">
+                            <div class="skill-bar">
+                                <div class="skill-name">HTML5/CSS3</div>
+                                <div class="skill-level" data-level="95%"></div>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-name">JavaScript</div>
+                                <div class="skill-level" data-level="90%"></div>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-name">React</div>
+                                <div class="skill-level" data-level="85%"></div>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-name">Node.js</div>
+                                <div class="skill-level" data-level="80%"></div>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-name">Python</div>
+                                <div class="skill-level" data-level="75%"></div>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-name">Networking</div>
+                                <div class="skill-level" data-level="85%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3><i class="fas fa-users"></i> Soft Skills</h3>
+                        <ul>
+                            <li>Problem-Solving & Critical Thinking</li>
+                            <li>Effective Communication</li>
+                            <li>Team Collaboration</li>
+                            <li>Adaptability & Continuous Learning</li>
+                            <li>Time Management</li>
+                            <li>Attention to Detail</li>
+                            <li>Project Management</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Projects Section -->
+            <section id="projects" class="projects-section">
+                <h2>Featured Projects</h2>
+                <!-- Project Filters -->
+                <div class="project-filters">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="web">Web Development</button>
+                    <button class="filter-btn" data-filter="network">Networking</button>
+                    <button class="filter-btn" data-filter="ict">ICT Solutions</button>
+                </div>
+                <div class="projects-grid">
+                    <div class="project-card" data-category="web">
+                        <h3>E-Commerce Website</h3>
+                        <p>A full-stack e-commerce platform with React frontend and Node.js backend</p>
+                        <div class="tech-used">
+                            <span>React</span>
+                            <span>Node.js</span>
+                            <span>MongoDB</span>
+                        </div>
+                        <a href="#" class="project-link view-project-btn">View Project</a>
+                    </div>
+                    <div class="project-card" data-category="network">
+                        <h3>Network Monitoring Tool</h3>
+                        <p>A Python-based application for network performance analysis</p>
+                        <div class="tech-used">
+                            <span>Python</span>
+                            <span>Flask</span>
+                            <span>SQLite</span>
+                        </div>
+                        <a href="#" class="project-link view-project-btn">View Project</a>
+                    </div>
+                    <div class="project-card" data-category="ict">
+                        <h3>IT Helpdesk System</h3>
+                        <p>A ticketing system for ICT support teams</p>
+                        <div class="tech-used">
+                            <span>HTML/CSS</span>
+                            <span>JavaScript</span>
+                            <span>PHP</span>
+                        </div>
+                        <a href="#" class="project-link view-project-btn">View Project</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Testimonials Section -->
+            <section class="testimonials-section">
+                <h2>What People Say</h2>
+                <div class="testimonial-carousel">
+                    <div class="testimonial active">
+                        <p>"Brian delivered exceptional work on our web project. His attention to detail and problem-solving skills were impressive."</p>
+                        <div class="client-info">
+                            <div class="client-name">John Doe</div>
+                            <div class="client-title">CTO, Tech Solutions Ltd</div>
+                        </div>
+                    </div>
+                    <div class="testimonial">
+                        <p>"His networking expertise helped us resolve critical infrastructure issues that had been plaguing our systems for months."</p>
+                        <div class="client-info">
+                            <div class="client-name">Jane Smith</div>
+                            <div class="client-title">IT Director, University</div>
+                        </div>
+                    </div>
+                    <div class="carousel-controls">
+                        <button class="prev-btn"><i class="fas fa-chevron-left"></i></button>
+                        <button class="next-btn"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Experience Section -->
+            <section id="experience" class="experience-section">
+                <h2>Professional Experience</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-date">2023 - Present</div>
+                        <div class="timeline-content">
+                            <h3>ICT Intern - Murang'a University</h3>
+                            <ul>
+                                <li>Provided technical support for university staff and students</li>
+                                <li>Assisted in network maintenance and troubleshooting</li>
+                                <li>Developed small web applications for departmental use</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">2022</div>
+                        <div class="timeline-content">
+                            <h3>Freelance Web Developer</h3>
+                            <ul>
+                                <li>Built responsive websites for small businesses</li>
+                                <li>Implemented SEO best practices</li>
+                                <li>Provided ongoing maintenance and support</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Chat Toggle Button -->
+    <div class="chat-toggle" id="chatToggle">
+        <i class="fas fa-comment-dots fa-lg"></i>
+    </div>
+
+    <!-- Chat Dialog -->
+    <div class="chat-dialog" id="chatDialog">
+        <div class="chat-header">
+            <h3>Chat with Me</h3>
+            <button id="closeChat" style="background:none; border:none; color:white; cursor:pointer;">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="chat-body">
+            <div class="chat-messages" id="chatMessages">
+                <div class="message received">
+                    Hello! How can I help you today?
+                </div>
+                <!-- Messages will appear here -->
+            </div>
+        </div>
+        <div class="chat-input">
+            <input type="text" id="messageInput" placeholder="Type your message...">
+            <button id="sendMessage"><i class="fas fa-paper-plane"></i></button>
+        </div>
+    </div>
+
+        </main><!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-social">WhatsApp
+                <a href="https://wa.me/2547XXXXXXXXX" target="_blank" aria-label="WhatsApp">
+                    <i class="fab fa-whatsapp"></i>
+                </a>Facebook
+                <a href="https://facebook.com/yourprofile" target="_blank" aria-label="Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>Instagram
+                <a href="https://instagram.com/yourprofile" target="_blank" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>Github
+                <a href="https://github.com/Evbrian" target="_blank" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>Linked In
+                <a href="https://linkedin.com/in/yourprofile" target="_blank" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>Twitter
+                <a href="https://twitter.com/yourhandle" target="_blank" aria-label="Twitter">
+                    <i class="fab fa-twitter"></i>
+                </a>
+            </div>
+          
+         <!--   <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+            </div>-->
+            <!-- Language Switcher -->
+            <div class="language-switcher">
+                <button data-lang="en">EN</button>
+                <button data-lang="sw">SW</button>
+            </div>
+            <p>
+                <i class="fas fa-envelope"></i> brianmwenda05@email.com
+                <i class="fas fa-phone"></i> +254 717677103
+                <i class="fas fa-map-marker-alt"></i> Nairobi, Kenya
+            </p>         
+              <p>&copy; <span id="year"></span> Njeru Brian Mwenda. All rights reserved.</p>
+        </div>
+    </footer>
+    </div>
+
+    <!-- Project Modal -->
+    <div id="project-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2 id="modal-title"></h2>
+            <div id="modal-content"></div>
+            <div class="modal-links">
+                <a href="#" id="live-demo" class="modal-link" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                <a href="#" id="source-code" class="modal-link" target="_blank"><i class="fab fa-github"></i> Source Code</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Update year automatically
+        document.getElementById('year').textContent = new Date().getFullYear();
+        
+        // Smooth scrolling for navigation
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Theme Toggle
+        const themeBtn = document.getElementById('theme-toggle');
+        themeBtn.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            themeBtn.innerHTML = document.body.classList.contains('dark-mode') 
+                ? '<i class="fas fa-sun"></i>' 
+                : '<i class="fas fa-moon"></i>';
+        });
+
+        // Skill Bars Animation
+        document.querySelectorAll('.skill-level').forEach(bar => {
+            bar.style.width = bar.dataset.level;
+        });
+
+        // Project Filter System
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Update active button
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                
+                // Filter projects
+                const filter = btn.dataset.filter;
+                document.querySelectorAll('.project-card').forEach(card => {
+                    card.style.display = filter === 'all' || card.dataset.category === filter 
+                        ? 'block' 
+                        : 'none';
+                });
+            });
+        });
+
+        // Project Modal
+        document.querySelectorAll('.view-project-btn').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const project = e.target.closest('.project-card');
+                document.getElementById('modal-title').textContent = project.querySelector('h3').textContent;
+                document.getElementById('modal-content').innerHTML = `
+                    <p>${project.querySelector('p').textContent}</p>
+                    <h3>Technologies Used:</h3>
+                    <div>${project.querySelector('.tech-used').innerHTML}</div>
+                `;
+                document.getElementById('project-modal').style.display = 'block';
+            });
+        });
+
+        // Close Modal
+        document.querySelector('.close-modal').addEventListener('click', () => {
+            document.getElementById('project-modal').style.display = 'none';
+        });
+
+        // Close modal when clicking outside
+        window.addEventListener('click', (e) => {
+            if (e.target === document.getElementById('project-modal')) {
+                document.getElementById('project-modal').style.display = 'none';
+            }
+        });
+
+        // Scroll Progress Indicator
+        window.addEventListener('scroll', () => {
+            const scrollTop = document.documentElement.scrollTop;
+            const scrollHeight = document.documentElement.scrollHeight;
+            const clientHeight = document.documentElement.clientHeight;
+            const progress = (scrollTop / (scrollHeight - clientHeight)) * 100;
+            document.querySelector('.scroll-progress').style.width = `${progress}%`;
+        });
+
+        // Testimonial Carousel
+        let currentTestimonial = 0;
+        const testimonials = document.querySelectorAll('.testimonial');
+
+        function showTestimonial(index) {
+            testimonials.forEach((t, i) => {
+                t.classList.toggle('active', i === index);
+            });
+        }
+
+        document.querySelector('.next-btn').addEventListener('click', () => {
+            currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+            showTestimonial(currentTestimonial);
+        });
+
+        document.querySelector('.prev-btn').addEventListener('click', () => {
+            currentTestimonial = (currentTestimonial - 1 + testimonials.length) % testimonials.length;
+            showTestimonial(currentTestimonial);
+        });
+
+        // Auto-rotate testimonials
+        setInterval(() => {
+            currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+            showTestimonial(currentTestimonial);
+        }, 8000);
+
+        // Contact Form Validation
+        document.getElementById('contactForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const email = document.getElementById('email').value;
+            
+            if (!email.includes('@')) {
+                alert('Please enter a valid email address');
+                return;
+            }
+            
+            // Here you would normally send the form data to a server
+            alert('Thank you for your message! I will get back to you soon.');
+            e.target.reset();
+        });
+
+        // Language Switcher (basic implementation)
+        const translations = {
+            en: {
+                about: "About Me",
+                skills: "My Skills",
+                projects: "Featured Projects",
+                experience: "Professional Experience",
+                contact: "Get In Touch",
+                testimonials: "What People Say"
+            },
+            sw: {
+                about: "Kuhusu Mimi",
+                skills: "Ujuzi Wangu",
+                projects: "Miradi Maarufu",
+                experience: "Uzoefu wa Kazi",
+                contact: "Wasiliana Nami",
+                testimonials: "Watu Wasemaje"
+            }
+        };
+
+        document.querySelectorAll('.language-switcher button').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const lang = btn.dataset.lang;
+                document.querySelectorAll('h2').forEach(el => {
+                    const key = el.textContent.trim().toLowerCase().replace(/\s+/g, '-');
+                    if (translations[lang][key]) {
+                        el.textContent = translations[lang][key];
+                    }
+                });
+            });
+        });
+
+        // Hotjar Tracking Code
+        (function(h,o,t,j,a,r){
+            h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+            h._hjSettings={hjid:0000000,hjsv:6};
+            a=o.getElementsByTagName('head')[0];
+            r=o.createElement('script');r.async=1;
+            r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+            a.appendChild(r);
+        })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+
+         const chatToggle = document.getElementById('chatToggle');
+        const chatDialog = document.getElementById('chatDialog');
+        const closeChat = document.getElementById('closeChat');
+        const messageInput = document.getElementById('messageInput');
+        const sendMessage = document.getElementById('sendMessage');
+        const chatMessages = document.getElementById('chatMessages');
+        
+        // Toggle chat dialog
+        chatToggle.addEventListener('click', () => {
+            chatDialog.style.display = chatDialog.style.display === 'block' ? 'none' : 'block';
+        });
+        
+        // Close chat dialog
+        closeChat.addEventListener('click', () => {
+            chatDialog.style.display = 'none';
+        });
+        
+        // Send message
+        sendMessage.addEventListener('click', sendNewMessage);
+        messageInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') sendNewMessage();
+        });
+        
+        function sendNewMessage() {
+            const message = messageInput.value.trim();
+            if (message) {
+                // Add user message
+                addMessage(message, 'sent');
+                messageInput.value = '';
+                
+                // Simulate reply after 1 second
+                setTimeout(() => {
+                    addMessage("Thanks for your message! I'll get back to you soon.", 'received');
+                }, 1000);
+            }
+        }
+        
+        function addMessage(text, type) {
+            const messageDiv = document.createElement('div');
+            messageDiv.classList.add('message', type);
+            messageDiv.textContent = text;
+            chatMessages.appendChild(messageDiv);
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        }
+        
+
+  function setLanguage(lang) {
+    const frame = document.querySelector('iframe.goog-te-menu-frame');
+    if (!frame) {
+        alert("Google Translate not loaded yet. Please wait a moment.");
+        return;
+    }
+
+    const innerDoc = frame.contentDocument || frame.contentWindow.document;
+    const langItems = innerDoc.querySelectorAll('.goog-te-menu2-item');
+
+    langItems.forEach(item => {
+        if (item.textContent.toLowerCase().includes(lang.toLowerCase())) {
+            item.click();
+        }
+    });
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const enBtn = document.querySelector('[data-lang="en"]');
+    const swBtn = document.querySelector('[data-lang="sw"]');
+
+    if (enBtn && swBtn) {
+        enBtn.addEventListener('click', () => setLanguage('English'));
+        swBtn.addEventListener('click', () => setLanguage('Swahili'));
+    }
+  });
+  
+    </script>
+</body>
+</html>
