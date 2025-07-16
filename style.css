@@ -273,79 +273,40 @@ body > .skiptranslate {
 }
 
 /* Footer */
-.footer {
-    background-color: #2d3748;
-    color: #f7fafc;
-    padding: 2.5rem 0;
-    text-align: center;
-    padding-bottom: 2px;
-    font-family: 'DM Sans', sans-serif;
-    border-top: 1px solid rgba(255,255,255,0.05);
-    margin-top: 2rem;
-}
-
-.footer-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 1.5rem;
-}
-
 .footer-social {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
   justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 .footer-social a {
-    color: white;
-    width: 42px;
-    height: 42px;
-    border-radius: 50%;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.3s ease;
-    font-size: 1.1rem;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 30px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 500;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  background-color: #333;
 }
-
-.footer-social a:nth-child(1) { background-color: #25D366; }
-.footer-social a:nth-child(2) { background-color: #3b5998; }
-.footer-social a:nth-child(3) {
-    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
-}
-.footer-social a:nth-child(4) { background-color: #333; }
-.footer-social a:nth-child(5) { background-color: #0077b5; }
-.footer-social a:nth-child(6) { background-color: #1da1f2; }
 
 .footer-social a:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transform: translateY(-3px);
+  background-color: var(--primary);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
+.footer-social a:nth-child(1) { background-color: #25D366; } /* WhatsApp */
+.footer-social a:nth-child(2) { background-color: #3b5998; } /* Facebook */
+.footer-social a:nth-child(3) { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); } /* Instagram */
+.footer-social a:nth-child(4) { background-color: #333; } /* GitHub */
+.footer-social a:nth-child(5) { background-color: #0077b5; } /* LinkedIn */
+.footer-social a:nth-child(6) { background-color: #1da1f2; } /* Twitter */
 
-.footer-content p {
-    margin: 1rem 0;
-    color: #a0aec0;
-    font-size: 0.9rem;
-}
-
-.footer-links {
-    display: flex;
-    justify-content: center;
-    gap: 1.5rem;
-    margin: 1rem 0;
-}
-
-.footer-links a {
-    color: #cbd5e0;
-    font-size: 0.85rem;
-    transition: color 0.2s ease;
-}
-
-.footer-links a:hover {
-    color: white;
-    text-decoration: underline;
-}
 
 /* Language Switcher (if used) */
 .language-switcher {
