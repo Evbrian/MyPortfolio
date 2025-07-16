@@ -239,7 +239,7 @@
 <section class="testimonial-form-toggle" style="text-align: center; margin-top: 3rem;">
   <h2 style="color: var(--primary); margin-bottom: 1rem;">Leave Your Testimonial</h2>
 
-  <button onclick="toggleForm()" style="
+  <button id="formToggleBtn" onclick="toggleForm()" style="
     background: var(--accent);
     color: white;
     padding: 0.8rem 1.5rem;
@@ -265,6 +265,7 @@
     </iframe>
   </div>
 </section>
+
 
             <!-- Experience Section -->
             <section id="experience" class="experience-section">
@@ -344,7 +345,18 @@
     }, 5000);
   }
 
+ function toggleForm() {
+    const form = document.getElementById("formContainer");
+    const button = document.getElementById("formToggleBtn");
 
+    if (form.style.display === "none" || form.style.display === "") {
+      form.style.display = "block";
+      button.textContent = "Hide Testimonial Form";
+    } else {
+      form.style.display = "none";
+      button.textContent = "Open Testimonial Form";
+    }
+  }
     // Theme Toggle
    // Theme Toggle (Fixed)
 document.getElementById("theme-toggle").addEventListener("click", function () {
