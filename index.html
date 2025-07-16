@@ -239,7 +239,7 @@
 <section class="testimonial-form-toggle" style="text-align: center; margin-top: 3rem;">
   <h2 style="color: var(--primary); margin-bottom: 1rem;">Leave Your Testimonial</h2>
 
-  <button id="formToggleBtn" onclick="toggleForm()" style="
+  <button id="formToggleBtn" style="
     background: var(--accent);
     color: white;
     padding: 0.8rem 1.5rem;
@@ -345,18 +345,21 @@
     }, 5000);
   }
 
- function toggleForm() {
-    const form = document.getElementById("formContainer");
+ // Attach toggle handler AFTER the button is rendered
+  document.addEventListener("DOMContentLoaded", function () {
     const button = document.getElementById("formToggleBtn");
+    const form = document.getElementById("formContainer");
 
-    if (form.style.display === "none" || form.style.display === "") {
-      form.style.display = "block";
-      button.textContent = "Hide Testimonial Form";
-    } else {
-      form.style.display = "none";
-      button.textContent = "Open Testimonial Form";
-    }
-  }
+    button.addEventListener("click", function () {
+      if (form.style.display === "none" || form.style.display === "") {
+        form.style.display = "block";
+        button.textContent = "Hide Testimonial Form";
+      } else {
+        form.style.display = "none";
+        button.textContent = "Open Testimonial Form";
+      }
+    });
+  });
     // Theme Toggle
    // Theme Toggle (Fixed)
 document.getElementById("theme-toggle").addEventListener("click", function () {
