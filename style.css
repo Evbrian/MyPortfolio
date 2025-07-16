@@ -454,22 +454,24 @@ body > .skiptranslate {
 }
 
 .projects-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    justify-content: center;
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 2rem;
+  padding-bottom: 1rem;
+  scroll-behavior: smooth;
 }
 
 .project-card {
-    background: var(--darker);
-    padding: 1.5rem;
-    border-radius: 12px;
-    width: 300px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-    border: 1px solid rgba(255,255,255,0.05);
-    transition: transform 0.3s ease;
+  flex: 0 0 300px; /* Fixed width */
+  scroll-snap-align: start;
+  background: var(--darker);
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  border: 1px solid rgba(255,255,255,0.05);
+  transition: transform 0.3s ease;
 }
-
 .project-card:hover {
     transform: translateY(-6px);
 }
