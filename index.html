@@ -1,70 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Njeru Brian Mwenda | Full-Stack Developer & ICT Specialist</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Njeru Brian Mwenda | Full-Stack Developer & ICT Specialist</title>
 
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'GA_MEASUREMENT_ID');
-    </script>
+  <!-- Styles and Fonts -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
 
-    <!-- Google Translate -->
-<script type="text/javascript">
-  function googleTranslateElementInit() {
-    new google.translate.TranslateElement({
-      pageLanguage: 'en',
-      includedLanguages: 'sw',
-      layout: google.translate.TranslateElement.InlineLayout.SIMPLE
-    }, 'google_translate_element');
-  }
-</script>
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LMHJ6QWRX2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-LMHJ6QWRX2');
+  </script>
 
-<!-- Load Google Translate -->
-<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-
+  <!-- Google Translate -->
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'en',
+        includedLanguages: 'en,sw',
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+      }, 'google_translate_element');
+    }
+  </script>
+  <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" async defer></script>
 </head>
-
 <body>
-    <!-- Scroll Progress Indicator -->
-    <div class="scroll-progress"></div>
+  <!-- Google Translate Widget -->
+  <div id="google_translate_element"></div>
 
-    <div class="portfolio-container">
-        <!-- Header Section -->
-        <header class="header">
-            <!-- Theme Toggle -->
-            <button id="theme-toggle" class="theme-btn">
-                <i class="fas fa-moon"></i>
-            </button>
-            <!-- <nav> was never opened, so we remove the closing tag -->
+  <div class="portfolio-container">
+    <header class="header">
+      <button id="theme-toggle" class="theme-btn">
+        <i class="fas fa-moon"></i>
+      </button>
+      <div class="hero">
+  <h1>Njeru Brian Mwenda</h1>
+  <p class="tagline">Full-Stack Developer & ICT Specialist</p>
+  
+  <!-- Download Resume -->
+  <a href="CURRICULUM VITAE.pdf" download class="resume-btn" onclick="notifyDownload()">
+    <i class="fas fa-download"></i> Download Resume
+  </a>
 
-            <div class="hero">
-                <div id="google_translate_element"></div>
+  <!-- View Resume -->
+  <a href="CURRICULUM VITAE.pdf" target="_blank" class="resume-btn">
+    <i class="fas fa-eye"></i> View Resume
+  </a>
 
-                <h1>Njeru Brian Mwenda</h1>
-                <p class="tagline">Full-Stack Developer & ICT Specialist</p>
+  <!-- Notification -->
+  <p id="download-msg" style="display:none; color: green; font-weight: bold; margin-top: 10px;">
+    ✅ CV download initiated. Check your downloads folder.
+  </p>
+</div>
+    </header>
 
-                <!-- Download Resume Button -->
-                <a href="/path/to/resume.pdf" download class="resume-btn">
-                    <i class="fas fa-download"></i> Download Resume
-                </a>
-            </div>
-        </header>
-
-        <!-- Main Content -->        <!-- Main Content -->
-        <main class="main-content">
-            <!-- About Section -->
+    <main class="main-content">            <!-- About Section -->
             <section id="about" class="profile-section">
                 <div class="profile-pic">
                     <img src="WhatsApp Image 2025-07-04 at 09.40.42.jpeg" alt="Njeru Brian Mwenda">
@@ -236,323 +236,146 @@
     <div class="chat-toggle" id="chatToggle">
         <i class="fas fa-comment-dots fa-lg"></i>
     </div>
+    <div id="chat-loading" style="display: none; position: fixed; bottom: 80px; right: 20px; color: gray; font-size: 14px;">
+  Loading chat...
+</div>
 
-    <!-- Chat Dialog -->
-    <div class="chat-dialog" id="chatDialog">
-        <div class="chat-header">
-            <h3>Chat with Me</h3>
-            <button id="closeChat" style="background:none; border:none; color:white; cursor:pointer;">
-                <i class="fas fa-times"></i>
-            </button>
-        </div>
-        <div class="chat-body">
-            <div class="chat-messages" id="chatMessages">
-                <div class="message received">
-                    Hello! How can I help you today?
-                </div>
-                <!-- Messages will appear here -->
-            </div>
-        </div>
-        <div class="chat-input">
-            <input type="text" id="messageInput" placeholder="Type your message...">
-            <button id="sendMessage"><i class="fas fa-paper-plane"></i></button>
-        </div>
-    </div>
 
-        </main><!-- Footer -->
+    </main>
     <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-social">WhatsApp
-                <a href="https://wa.me/2547XXXXXXXXX" target="_blank" aria-label="WhatsApp">
-                    <i class="fab fa-whatsapp"></i>
-                </a>Facebook
-                <a href="https://facebook.com/yourprofile" target="_blank" aria-label="Facebook">
-                    <i class="fab fa-facebook-f"></i>
-                </a>Instagram
-                <a href="https://instagram.com/yourprofile" target="_blank" aria-label="Instagram">
-                    <i class="fab fa-instagram"></i>
-                </a>Github
-                <a href="https://github.com/Evbrian" target="_blank" aria-label="GitHub">
-                    <i class="fab fa-github"></i>
-                </a>Linked In
-                <a href="https://linkedin.com/in/yourprofile" target="_blank" aria-label="LinkedIn">
-                    <i class="fab fa-linkedin-in"></i>
-                </a>Twitter
-                <a href="https://twitter.com/yourhandle" target="_blank" aria-label="Twitter">
-                    <i class="fab fa-twitter"></i>
-                </a>
-            </div>
-          
-         <!--   <div class="footer-links">
-                <a href="#">Privacy Policy</a>
-                <a href="#">Terms of Service</a>
-            </div>-->
-            <!-- Language Switcher -->
-            <div class="language-switcher">
-                <button data-lang="en">EN</button>
-                <button data-lang="sw">SW</button>
-            </div>
-            <p>
-                <i class="fas fa-envelope"></i> brianmwenda05@email.com
-                <i class="fas fa-phone"></i> +254 717677103
-                <i class="fas fa-map-marker-alt"></i> Nairobi, Kenya
-            </p>         
-              <p>&copy; <span id="year"></span> Njeru Brian Mwenda. All rights reserved.</p>
+      <div class="footer-content">
+        <div class="footer-social">
+          WhatsApp <a href="https://wa.me/254717677103" target="_blank"><i class="fab fa-whatsapp"></i></a>
+          Facebook <a href="https://facebook.com/yourprofile" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          Instagram <a href="https://instagram.com/yourprofile" target="_blank"><i class="fab fa-instagram"></i></a>
+          Github <a href="https://github.com/Evbrian" target="_blank"><i class="fab fa-github"></i></a>
+          LinkedIn <a href="https://linkedin.com/in/yourprofile" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+          Twitter <a href="https://twitter.com/yourhandle" target="_blank"><i class="fab fa-twitter"></i></a>
         </div>
+        <div class="language-switcher">
+          <button data-lang="en">EN</button>
+          <button data-lang="sw">SW</button>
+        </div>
+        <p>
+          <i class="fas fa-envelope"></i> brianmwenda05@gmail.com
+          <i class="fas fa-phone"></i> +254 717677103
+          <i class="fas fa-map-marker-alt"></i> Nairobi, Kenya
+        </p>
+        <p>&copy; <span id="year"></span> Njeru Brian Mwenda. All rights reserved.</p>
+      </div>
     </footer>
-    </div>
+  </div>
 
-    <!-- Project Modal -->
-    <div id="project-modal" class="modal">
-        <div class="modal-content">
-            <span class="close-modal">&times;</span>
-            <h2 id="modal-title"></h2>
-            <div id="modal-content"></div>
-            <div class="modal-links">
-                <a href="#" id="live-demo" class="modal-link" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                <a href="#" id="source-code" class="modal-link" target="_blank"><i class="fab fa-github"></i> Source Code</a>
-            </div>
-        </div>
-    </div>
+  <!-- Utility Scripts -->
+  <script>
+    // Dynamic Year
+    document.getElementById("year").textContent = new Date().getFullYear();
 
-    <script>
-        // Update year automatically
-        document.getElementById('year').textContent = new Date().getFullYear();
-        
-        // Smooth scrolling for navigation
-        document.querySelectorAll('nav a').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
+    function notifyDownload() {
+    const msg = document.getElementById("download-msg");
+    msg.style.display = "block";
 
-        // Theme Toggle
-        const themeBtn = document.getElementById('theme-toggle');
-        themeBtn.addEventListener('click', () => {
-            document.body.classList.toggle('dark-mode');
-            themeBtn.innerHTML = document.body.classList.contains('dark-mode') 
-                ? '<i class="fas fa-sun"></i>' 
-                : '<i class="fas fa-moon"></i>';
-        });
-
-        // Skill Bars Animation
-        document.querySelectorAll('.skill-level').forEach(bar => {
-            bar.style.width = bar.dataset.level;
-        });
-
-        // Project Filter System
-        const filterBtns = document.querySelectorAll('.filter-btn');
-        filterBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
-                // Update active button
-                filterBtns.forEach(b => b.classList.remove('active'));
-                btn.classList.add('active');
-                
-                // Filter projects
-                const filter = btn.dataset.filter;
-                document.querySelectorAll('.project-card').forEach(card => {
-                    card.style.display = filter === 'all' || card.dataset.category === filter 
-                        ? 'block' 
-                        : 'none';
-                });
-            });
-        });
-
-        // Project Modal
-        document.querySelectorAll('.view-project-btn').forEach(link => {
-            link.addEventListener('click', (e) => {
-                e.preventDefault();
-                const project = e.target.closest('.project-card');
-                document.getElementById('modal-title').textContent = project.querySelector('h3').textContent;
-                document.getElementById('modal-content').innerHTML = `
-                    <p>${project.querySelector('p').textContent}</p>
-                    <h3>Technologies Used:</h3>
-                    <div>${project.querySelector('.tech-used').innerHTML}</div>
-                `;
-                document.getElementById('project-modal').style.display = 'block';
-            });
-        });
-
-        // Close Modal
-        document.querySelector('.close-modal').addEventListener('click', () => {
-            document.getElementById('project-modal').style.display = 'none';
-        });
-
-        // Close modal when clicking outside
-        window.addEventListener('click', (e) => {
-            if (e.target === document.getElementById('project-modal')) {
-                document.getElementById('project-modal').style.display = 'none';
-            }
-        });
-
-        // Scroll Progress Indicator
-        window.addEventListener('scroll', () => {
-            const scrollTop = document.documentElement.scrollTop;
-            const scrollHeight = document.documentElement.scrollHeight;
-            const clientHeight = document.documentElement.clientHeight;
-            const progress = (scrollTop / (scrollHeight - clientHeight)) * 100;
-            document.querySelector('.scroll-progress').style.width = `${progress}%`;
-        });
-
-        // Testimonial Carousel
-        let currentTestimonial = 0;
-        const testimonials = document.querySelectorAll('.testimonial');
-
-        function showTestimonial(index) {
-            testimonials.forEach((t, i) => {
-                t.classList.toggle('active', i === index);
-            });
-        }
-
-        document.querySelector('.next-btn').addEventListener('click', () => {
-            currentTestimonial = (currentTestimonial + 1) % testimonials.length;
-            showTestimonial(currentTestimonial);
-        });
-
-        document.querySelector('.prev-btn').addEventListener('click', () => {
-            currentTestimonial = (currentTestimonial - 1 + testimonials.length) % testimonials.length;
-            showTestimonial(currentTestimonial);
-        });
-
-        // Auto-rotate testimonials
-        setInterval(() => {
-            currentTestimonial = (currentTestimonial + 1) % testimonials.length;
-            showTestimonial(currentTestimonial);
-        }, 8000);
-
-        // Contact Form Validation
-        document.getElementById('contactForm').addEventListener('submit', (e) => {
-            e.preventDefault();
-            const email = document.getElementById('email').value;
-            
-            if (!email.includes('@')) {
-                alert('Please enter a valid email address');
-                return;
-            }
-            
-            // Here you would normally send the form data to a server
-            alert('Thank you for your message! I will get back to you soon.');
-            e.target.reset();
-        });
-
-        // Language Switcher (basic implementation)
-        const translations = {
-            en: {
-                about: "About Me",
-                skills: "My Skills",
-                projects: "Featured Projects",
-                experience: "Professional Experience",
-                contact: "Get In Touch",
-                testimonials: "What People Say"
-            },
-            sw: {
-                about: "Kuhusu Mimi",
-                skills: "Ujuzi Wangu",
-                projects: "Miradi Maarufu",
-                experience: "Uzoefu wa Kazi",
-                contact: "Wasiliana Nami",
-                testimonials: "Watu Wasemaje"
-            }
-        };
-
-        document.querySelectorAll('.language-switcher button').forEach(btn => {
-            btn.addEventListener('click', () => {
-                const lang = btn.dataset.lang;
-                document.querySelectorAll('h2').forEach(el => {
-                    const key = el.textContent.trim().toLowerCase().replace(/\s+/g, '-');
-                    if (translations[lang][key]) {
-                        el.textContent = translations[lang][key];
-                    }
-                });
-            });
-        });
-
-        // Hotjar Tracking Code
-        (function(h,o,t,j,a,r){
-            h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-            h._hjSettings={hjid:0000000,hjsv:6};
-            a=o.getElementsByTagName('head')[0];
-            r=o.createElement('script');r.async=1;
-            r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-            a.appendChild(r);
-        })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-
-         const chatToggle = document.getElementById('chatToggle');
-        const chatDialog = document.getElementById('chatDialog');
-        const closeChat = document.getElementById('closeChat');
-        const messageInput = document.getElementById('messageInput');
-        const sendMessage = document.getElementById('sendMessage');
-        const chatMessages = document.getElementById('chatMessages');
-        
-        // Toggle chat dialog
-        chatToggle.addEventListener('click', () => {
-            chatDialog.style.display = chatDialog.style.display === 'block' ? 'none' : 'block';
-        });
-        
-        // Close chat dialog
-        closeChat.addEventListener('click', () => {
-            chatDialog.style.display = 'none';
-        });
-        
-        // Send message
-        sendMessage.addEventListener('click', sendNewMessage);
-        messageInput.addEventListener('keypress', (e) => {
-            if (e.key === 'Enter') sendNewMessage();
-        });
-        
-        function sendNewMessage() {
-            const message = messageInput.value.trim();
-            if (message) {
-                // Add user message
-                addMessage(message, 'sent');
-                messageInput.value = '';
-                
-                // Simulate reply after 1 second
-                setTimeout(() => {
-                    addMessage("Thanks for your message! I'll get back to you soon.", 'received');
-                }, 1000);
-            }
-        }
-        
-        function addMessage(text, type) {
-            const messageDiv = document.createElement('div');
-            messageDiv.classList.add('message', type);
-            messageDiv.textContent = text;
-            chatMessages.appendChild(messageDiv);
-            chatMessages.scrollTop = chatMessages.scrollHeight;
-        }
-        
-
-  function setLanguage(lang) {
-    const frame = document.querySelector('iframe.goog-te-menu-frame');
-    if (!frame) {
-        alert("Google Translate not loaded yet. Please wait a moment.");
-        return;
-    }
-
-    const innerDoc = frame.contentDocument || frame.contentWindow.document;
-    const langItems = innerDoc.querySelectorAll('.goog-te-menu2-item');
-
-    langItems.forEach(item => {
-        if (item.textContent.toLowerCase().includes(lang.toLowerCase())) {
-            item.click();
-        }
-    });
+    // Optionally hide the message after a few seconds
+    setTimeout(() => {
+      msg.style.display = "none";
+    }, 5000);
   }
 
-  document.addEventListener("DOMContentLoaded", function () {
-    const enBtn = document.querySelector('[data-lang="en"]');
-    const swBtn = document.querySelector('[data-lang="sw"]');
 
-    if (enBtn && swBtn) {
-        enBtn.addEventListener('click', () => setLanguage('English'));
-        swBtn.addEventListener('click', () => setLanguage('Swahili'));
-    }
+    // Theme Toggle
+   // Theme Toggle (Fixed)
+document.getElementById("theme-toggle").addEventListener("click", function () {
+  document.body.classList.toggle("light-mode"); // ✅ This matches your CSS
+  const icon = this.querySelector("i");
+  icon.classList.toggle("fa-sun");
+  icon.classList.toggle("fa-moon");
+
+  // Store preference
+  const theme = document.body.classList.contains("light-mode") ? "light" : "dark";
+  localStorage.setItem("theme", theme);
+});
+
+// Load stored theme on page load
+window.addEventListener("DOMContentLoaded", () => {
+  const storedTheme = localStorage.getItem("theme");
+  if (storedTheme === "light") {
+    document.body.classList.add("light-mode");
+    const icon = document.getElementById("theme-toggle").querySelector("i");
+    icon.classList.remove("fa-moon");
+    icon.classList.add("fa-sun");
+  }
+});
+
+    // Skill Bars
+    document.addEventListener("DOMContentLoaded", () => {
+      document.querySelectorAll(".skill-level").forEach(level => {
+        const width = level.getAttribute("data-level");
+        level.style.width = width;
+        level.style.backgroundColor = "#6c5ce7";
+        level.style.height = "8px";
+        level.style.borderRadius = "5px";
+      });
+    });
+
+    // Language Switcher
+    document.querySelectorAll('.language-switcher button').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const lang = btn.getAttribute('data-lang');
+        const select = document.querySelector('#google_translate_element select');
+        if (select) {
+          select.value = lang;
+          select.dispatchEvent(new Event('change'));
+        }
+      });
+    });
+
+
+  // Ensure Google Translate has enough z-index and height buffer
+  window.addEventListener('load', () => {
+    const interval = setInterval(() => {
+      const iframe = document.querySelector('.goog-te-menu-frame');
+      if (iframe) {
+        iframe.style.zIndex = '999999';
+        iframe.style.top = '60px';
+        iframe.style.position = 'absolute';
+        clearInterval(interval);
+      }
+    }, 300);
   });
-  
-    </script>
+
+
+  </script>
+
+<!-- Tawk.to Script with Manual Toggle -->
+<script type="text/javascript">
+  var Tawk_API = Tawk_API || {};
+  var Tawk_LoadStart = new Date();
+
+  (function () {
+    var s1 = document.createElement("script");
+    s1.async = true;
+    s1.src = "https://embed.tawk.to/68779df6a461ff191259224e/1j09k23mm";
+    s1.charset = "UTF-8";
+    s1.setAttribute("crossorigin", "*");
+    var s0 = document.getElementsByTagName("script")[0];
+    s0.parentNode.insertBefore(s1, s0);
+  })();
+
+  // Set up the toggle button when Tawk is ready
+  const chatButton = document.getElementById("chatToggle");
+const chatLoading = document.getElementById("chat-loading");
+chatLoading.style.display = "block";
+
+const checkTawkReady = setInterval(() => {
+  if (typeof Tawk_API !== "undefined" && typeof Tawk_API.toggle === "function") {
+    clearInterval(checkTawkReady);
+    chatLoading.style.display = "none";
+    chatButton.addEventListener("click", () => {
+      Tawk_API.toggle();
+    });
+  }
+}, 300);
+</script>
+
 </body>
 </html>
