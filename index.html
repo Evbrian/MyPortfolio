@@ -236,20 +236,28 @@
                     </div>
                 </div>
             </section>
-<section class="testimonial-form-toggle" style="text-align: center; margin-top: 3rem;">
-  <h2 style="color: var(--primary); margin-bottom: 1rem;">Leave Your Testimonial</h2>
+      <!--Testmonial Form-->
+<section class="testimonial-form-toggle" style="text-align: center; margin-top: 4rem;">
+  <h2 style="color: var(--primary); font-size: 2rem; margin-bottom: 1.5rem;">
+    We'd Love to Hear Your Feedback 💬
+  </h2>
 
   <button id="formToggleBtn" style="
-    background: var(--accent);
+    background: linear-gradient(135deg, var(--accent), var(--primary));
     color: white;
-    padding: 0.8rem 1.5rem;
+    padding: 0.9rem 2rem;
     border: none;
-    border-radius: 30px;
-    font-size: 1rem;
+    border-radius: 50px;
+    font-size: 1.05rem;
+    font-weight: bold;
     cursor: pointer;
-    transition: background 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
   ">
-    Open Testimonial Form
+    <i class="fas fa-comment-dots"></i> Leave a Testimonial
   </button>
 
   <div id="formContainer" style="display: none; margin-top: 2rem;">
@@ -260,12 +268,11 @@
       frameborder="0" 
       marginheight="0" 
       marginwidth="0"
-      style="max-width: 600px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.3); margin: auto;">
+      style="max-width: 600px; border-radius: 12px; box-shadow: 0 4px 18px rgba(0,0,0,0.5); margin: auto;">
       Loading…
     </iframe>
   </div>
 </section>
-
 
             <!-- Experience Section -->
             <section id="experience" class="experience-section">
@@ -351,13 +358,11 @@
     const form = document.getElementById("formContainer");
 
     button.addEventListener("click", function () {
-      if (form.style.display === "none" || form.style.display === "") {
-        form.style.display = "block";
-        button.textContent = "Hide Testimonial Form";
-      } else {
-        form.style.display = "none";
-        button.textContent = "Open Testimonial Form";
-      }
+      const isVisible = form.style.display === "block";
+      form.style.display = isVisible ? "none" : "block";
+      button.innerHTML = isVisible 
+        ? '<i class="fas fa-comment-dots"></i> Leave a Testimonial' 
+        : '<i class="fas fa-times"></i> Hide Form';
     });
   });
     // Theme Toggle
