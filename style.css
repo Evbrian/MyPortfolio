@@ -1,11 +1,11 @@
 /* Dark Theme Variables */
 :root {
-    --primary: #6c5ce7;  /* Purple accent */
-    --dark: #121212;     /* Dark background */
-    --darker: #0a0a0a;   /* Even darker elements */
-    --light: #e0e0e0;    /* Light text */
-    --lighter: #ffffff;  /* White for highlights */
-    --accent: #fd79a8;   /* Pink accent */
+    --primary: #6c5ce7;
+    --dark: #121212;
+    --darker: #0a0a0a;
+    --light: #e0e0e0;
+    --lighter: #ffffff;
+    --accent: #fd79a8;
 }
 
 /* Base Styles */
@@ -21,6 +21,7 @@ body {
     color: var(--light);
     line-height: 1.6;
     min-height: 100vh;
+    position: relative; /* Added for translate dropdown positioning */
 }
 
 .portfolio-container {
@@ -29,7 +30,7 @@ body {
     padding: 0 2rem;
 }
 
-/* Header Styles */
+/* Header */
 .header {
     text-align: center;
     padding: 4rem 0 3rem;
@@ -54,6 +55,55 @@ body {
     opacity: 0.8;
     font-weight: 300;
 }
+.goog-te-menu-frame {
+  position: absolute !important;
+  top: 60px !important;
+  z-index: 999999 !important;
+  width: auto !important;
+  height: auto !important;
+}
+
+.skiptranslate iframe {
+  display: block !important;
+}
+
+body > .skiptranslate {
+  display: none !important;
+}
+
+#google_translate_element {
+  position: relative;
+  z-index: 999;
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+}
+
+/* Theme Toggle Button Position and Style */
+.theme-btn {
+  position: fixed; /* stays in top-right even when scrolling */
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+  background: var(--darker);
+  border: 2px solid var(--primary);
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.theme-btn:hover {
+  background: var(--primary);
+  transform: scale(1.1);
+}
+
+.theme-btn i {
+  font-size: 1.8rem; /* Makes icon larger */
+  color: var(--light);
+}
+
 
 /* Profile Section */
 .profile-section {
@@ -63,37 +113,30 @@ body {
     margin-bottom: 4rem;
 }
 
-#google_translate_element {
-  display: none;
-}
-
-
 .profile-pic {
     flex: 1;
     position: relative;
-    /* Add these for perfect circle */
-    width: 250px; /* Fixed width for circle */
-    height: 250px; /* Same as width for perfect circle */
-    border-radius: 50%; /* Makes it circular */
-    overflow: hidden; /* Ensures image stays within circle */
-    border: 5px solid var(--primary); /* Colorful border */
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3); /* Softer shadow */
-    margin: 0 auto; /* Centers the circle */
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid var(--primary);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    margin: 0 auto;
 }
 
 .profile-pic img {
-    width: 100%; /* Fill the circle container */
-    height: 100%; /* Fill the circle container */
-    object-fit: cover; /* Ensures image covers area without distortion */
-    object-position: center top; /* Focus on face (adjust as needed) */
-    /* Remove these properties if they exist */
-    border-radius: 0; /* Override any previous border-radius */
-    border: none; /* Border is now on container */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: 0;
+    border: none;
 }
 
 .profile-pic:hover {
-    transform: scale(1.05); /* Gentle zoom on hover */
-    border-color: var(--accent); /* Changes border color on hover */
+    transform: scale(1.05);
+    border-color: var(--accent);
 }
 
 .profile-info {
@@ -116,7 +159,7 @@ body {
     opacity: 0.9;
 }
 
-/* Skills Section */
+/* Skills */
 .skills-section {
     margin-bottom: 4rem;
 }
@@ -227,118 +270,18 @@ body {
     color: white;
     transform: translateY(-3px);
     box-shadow: 0 5px 15px rgba(108, 92, 231, 0.4);
-}    /* Chat Dialog Styles */
-        .chat-dialog {
-            display: none;
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            width: 350px;
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-            z-index: 1000;
-            font-family: 'DM Sans', sans-serif;
-        }
-        
-        .chat-header {
-            background: #2563eb;
-            color: white;
-            padding: 15px;
-            border-radius: 10px 10px 0 0;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .chat-body {
-            padding: 15px;
-            height: 300px;
-            overflow-y: auto;
-        }
-        
-        .chat-input {
-            display: flex;
-            padding: 10px;
-            border-top: 1px solid #eee;
-        }
-        
-        .chat-input input {
-            flex: 1;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 20px;
-            margin-right: 10px;
-        }
-        
-        .chat-input button {
-            background: #2563eb;
-            color: white;
-            border: none;
-            border-radius: 50%;
-            width: 40px;
-            height: 40px;
-            cursor: pointer;
-        }
-        
-        .chat-toggle {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background: #2563eb;
-            color: white;
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-            z-index: 999;
-        }
-        
-        .message {
-            margin-bottom: 10px;
-            padding: 8px 12px;
-            border-radius: 18px;
-            max-width: 70%;
-        }
-        
-        .received {
-            background: #f1f1f1;
-            align-self: flex-start;
-        }
-        
-        .sent {
-            background: #2563eb;
-            color: white;
-            align-self: flex-end;
-            margin-left: auto;
-        }
-        
-        .chat-messages {
-            display: flex;
-            flex-direction: column;
-        }
+}
 
 /* Footer */
 .footer {
-    text-align: center;
-    padding: 2rem;
-    background-color: var(--darker);
-    color: var(--light);
-    border-top: 1px solid rgba(255,255,255,0.05);
-    margin-top: 2rem;
-}
-/* Footer Styles */
-.footer {
-    background-color: #2d3748; /* Dark blue-gray */
+    background-color: #2d3748;
     color: #f7fafc;
     padding: 2.5rem 0;
     text-align: center;
     padding-bottom: 2px;
     font-family: 'DM Sans', sans-serif;
+    border-top: 1px solid rgba(255,255,255,0.05);
+    margin-top: 2rem;
 }
 
 .footer-content {
@@ -347,7 +290,6 @@ body {
     padding: 0 1.5rem;
 }
 
-/* Social Icons */
 .footer-social {
     display: flex;
     justify-content: center;
@@ -367,30 +309,26 @@ body {
     font-size: 1.1rem;
 }
 
-/* Social Brand Colors */
-.footer-social a:nth-child(1) { background-color: #25D366; } /* WhatsApp */
-.footer-social a:nth-child(2) { background-color: #3b5998; } /* Facebook */
-.footer-social a:nth-child(3) { 
-    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); 
-} /* Instagram */
-.footer-social a:nth-child(4) { background-color: #333; } /* GitHub */
-.footer-social a:nth-child(5) { background-color: #0077b5; } /* LinkedIn */
-.footer-social a:nth-child(6) { background-color: #1da1f2; } /* Twitter */
+.footer-social a:nth-child(1) { background-color: #25D366; }
+.footer-social a:nth-child(2) { background-color: #3b5998; }
+.footer-social a:nth-child(3) {
+    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+}
+.footer-social a:nth-child(4) { background-color: #333; }
+.footer-social a:nth-child(5) { background-color: #0077b5; }
+.footer-social a:nth-child(6) { background-color: #1da1f2; }
 
-/* Hover Effects */
 .footer-social a:hover {
     transform: translateY(-3px);
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
-/* Copyright Text */
 .footer-content p {
     margin: 1rem 0;
     color: #a0aec0;
     font-size: 0.9rem;
 }
 
-/* Footer Links */
 .footer-links {
     display: flex;
     justify-content: center;
@@ -409,7 +347,7 @@ body {
     text-decoration: underline;
 }
 
-/* Language Switcher */
+/* Language Switcher (if used) */
 .language-switcher {
     margin-top: 1.25rem;
 }
@@ -431,8 +369,26 @@ body {
     color: white;
 }
 
-/* Responsive Adjustments */
+/* Responsive */
 @media (max-width: 768px) {
+    .header h1 {
+        font-size: 2.2rem;
+    }
+    .profile-section {
+        flex-direction: column;
+    }
+    .profile-pic {
+        margin-bottom: 2rem;
+    }
+    .contact-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+    .contact-links a {
+        width: 100%;
+        justify-content: center;
+    }
     .footer-social {
         gap: 1rem;
     }
@@ -447,28 +403,286 @@ body {
     }
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .header h1 {
-        font-size: 2.2rem;
-    }
-    
-    .profile-section {
-        flex-direction: column;
-    }
-    
-    .profile-pic {
-        margin-bottom: 2rem;
-    }
-    
-    .contact-links {
-        flex-direction: column;
-        align-items: center;
-        gap: 1rem;
-    }
-    
-    .contact-links a {
-        width: 100%;
-        justify-content: center;
-    }
+/* Resume Button */
+.resume-btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.75rem 1.5rem;
+    margin-top: 1.2rem;
+    background: var(--primary);
+    color: white;
+    font-weight: 600;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    gap: 8px;
+    border: none;
+}
+
+.resume-btn:hover {
+    background: var(--accent);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(253, 121, 168, 0.3);
+}
+
+/* Projects Section */
+.projects-section {
+    margin-bottom: 4rem;
+}
+
+.project-filters {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.filter-btn {
+    background: none;
+    border: 1px solid var(--primary);
+    padding: 0.5rem 1rem;
+    margin: 0 0.5rem;
+    border-radius: 20px;
+    color: var(--light);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+    background: var(--primary);
+    color: white;
+    transform: scale(1.05);
+}
+
+.projects-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.project-card {
+    background: var(--darker);
+    padding: 1.5rem;
+    border-radius: 12px;
+    width: 300px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    border: 1px solid rgba(255,255,255,0.05);
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-6px);
+}
+
+.project-card h3 {
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+}
+
+.project-card p {
+    font-size: 0.95rem;
+    opacity: 0.9;
+    margin-bottom: 1rem;
+}
+
+.tech-used span {
+    display: inline-block;
+    background: #333;
+    padding: 0.3rem 0.7rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    margin: 0 5px 5px 0;
+    color: var(--light);
+}
+
+.view-project-btn {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    margin-top: 0.8rem;
+    color: white;
+    background: var(--accent);
+    border-radius: 20px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-weight: 600;
+}
+
+.view-project-btn:hover {
+    background: var(--primary);
+    transform: translateY(-2px);
+}
+
+/* Testimonials */
+.testimonials-section {
+    background: var(--darker);
+    padding: 4rem 2rem;
+    border-radius: 12px;
+    margin-bottom: 4rem;
+}
+
+.testimonial-carousel {
+    position: relative;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.testimonial {
+    display: none;
+    background: #1e1e1e;
+    border-left: 4px solid var(--primary);
+    padding: 2rem;
+    border-radius: 10px;
+    font-style: italic;
+    color: #ddd;
+    transition: opacity 0.5s ease;
+}
+
+.testimonial.active {
+    display: block;
+}
+
+.client-info {
+    margin-top: 1rem;
+    text-align: right;
+}
+
+.client-name {
+    font-weight: bold;
+    color: var(--accent);
+}
+
+.carousel-controls {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.carousel-controls button {
+    background: var(--primary);
+    border: none;
+    padding: 0.6rem 1rem;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.carousel-controls button:hover {
+    background: var(--accent);
+}
+
+/* Chat Widget */
+.chat-toggle {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    background: var(--accent);
+    color: white;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    z-index: 999;
+    transition: transform 0.3s ease;
+}
+
+.chat-toggle:hover {
+    transform: scale(1.1);
+}
+
+.chat-dialog {
+    position: fixed;
+    bottom: 90px;
+    right: 24px;
+    width: 300px;
+    max-height: 400px;
+    background: var(--darker);
+    border-radius: 12px;
+    overflow: hidden;
+    display: none;
+    flex-direction: column;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    z-index: 999;
+}
+
+.chat-header {
+    background: var(--primary);
+    color: white;
+    padding: 0.8rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chat-body {
+    flex: 1;
+    padding: 0.8rem;
+    overflow-y: auto;
+}
+
+.chat-messages {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.message {
+    padding: 0.5rem 1rem;
+    border-radius: 15px;
+    max-width: 80%;
+}
+
+.message.received {
+    background: #2c2c2c;
+    align-self: flex-start;
+}
+
+.message.sent {
+    background: var(--primary);
+    color: white;
+    align-self: flex-end;
+}
+
+.chat-input {
+    display: flex;
+    padding: 0.5rem;
+    border-top: 1px solid #444;
+}
+
+.chat-input input {
+    flex: 1;
+    padding: 0.5rem 0.8rem;
+    border: none;
+    border-radius: 20px;
+    margin-right: 0.5rem;
+    background: #2a2a2a;
+    color: white;
+}
+
+.chat-input button {
+    background: var(--primary);
+    border: none;
+    padding: 0.5rem 0.9rem;
+    border-radius: 20px;
+    color: white;
+    cursor: pointer;
+}
+
+.chat-input button:hover {
+    background: var(--accent);
+}
+
+
+/* Light Theme Overrides */
+body.light-mode {
+    --dark: #f2f2f2;
+    --darker: #ffffff;
+    --light: #222222;
+    --lighter: #000000;
+    --accent: #e84393;
 }
