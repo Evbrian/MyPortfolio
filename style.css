@@ -475,6 +475,15 @@ body > .skiptranslate {
 .project-card:hover {
     transform: translateY(-6px);
 }
+.projects-grid::-webkit-scrollbar {
+  display: none;
+}
+
+.projects-grid {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+
 
 .project-card h3 {
     color: var(--primary);
