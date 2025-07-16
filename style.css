@@ -341,40 +341,6 @@ body > .skiptranslate {
     color: white;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-    .header h1 {
-        font-size: 2.2rem;
-    }
-    .profile-section {
-        flex-direction: column;
-    }
-    .profile-pic {
-        margin-bottom: 2rem;
-    }
-    .contact-links {
-        flex-direction: column;
-        align-items: center;
-        gap: 1rem;
-    }
-    .contact-links a {
-        width: 100%;
-        justify-content: center;
-    }
-    .footer-social {
-        gap: 1rem;
-    }
-    .footer-social a {
-        width: 38px;
-        height: 38px;
-        font-size: 1rem;
-    }
-    .footer-links {
-        flex-wrap: wrap;
-        gap: 0.8rem 1.5rem;
-    }
-}
-
 /* Resume Button */
 .resume-btn {
     display: inline-flex;
@@ -810,20 +776,97 @@ body.light-mode {
   }
 }
 
-@media (max-width: 480px) {
-  .header h1 {
-    font-size: 2rem;
+@media (max-width: 768px) {
+  /* General font and spacing reduction */
+  body {
+    font-size: 14px;
+    padding: 0 1rem;
   }
 
-  .profile-info h2,
-  .skills-section h2,
-  .contact-section h2,
-  .testimonial-form-section h2 {
+  .header {
+    padding: 3rem 1rem 2rem;
+  }
+
+  .header h1 {
+    font-size: 1.8rem;
+  }
+
+  .header p {
+    font-size: 1rem;
+  }
+
+  /* Profile Section */
+  .profile-section {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .profile-pic {
+    width: 180px;
+    height: 180px;
+  }
+
+  .profile-info {
+    padding: 1.2rem;
+    width: 100%;
+  }
+
+  .profile-info h2 {
+    font-size: 1.4rem;
+  }
+
+  .profile-info p {
+    font-size: 0.95rem;
+  }
+
+  /* Skills */
+  .skills-section h2 {
     font-size: 1.5rem;
   }
 
+  .skill-category {
+    padding: 1.2rem;
+    min-width: 220px;
+  }
+
+  .skill-category h3 {
+    font-size: 1.2rem;
+  }
+
+  .skill-category li {
+    font-size: 0.9rem;
+  }
+
+  /* Contact */
+  .contact-links {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .contact-links a {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
+
+  /* Projects */
   .project-card {
+    width: 100%;
+    max-width: 95%;
     padding: 1rem;
+  }
+
+  .project-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .project-card p {
+    font-size: 0.85rem;
+  }
+
+  .tech-used span {
+    font-size: 0.7rem;
+    padding: 0.3rem 0.6rem;
   }
 
   .view-project-btn {
@@ -831,17 +874,114 @@ body.light-mode {
     padding: 0.4rem 0.8rem;
   }
 
-  .tech-used span {
-    font-size: 0.7rem;
+  /* Testimonials */
+  .testimonial-form-section,
+  .testimonials-section {
+    padding: 2rem 1rem;
   }
 
-  .footer p {
-    font-size: 0.8rem;
+  .testimonial-form-section h2,
+  .testimonials-section h2 {
+    font-size: 1.5rem;
   }
 
   .testimonial {
     padding: 1.2rem;
     font-size: 0.9rem;
   }
+
+  /* Footer */
+  .footer {
+    padding: 1.5rem 1rem;
+  }
+
+  .footer-social {
+    gap: 0.6rem;
+    flex-wrap: wrap;
+  }
+
+  .footer-social a {
+    padding: 0.4rem 0.7rem;
+    font-size: 0.8rem;
+  }
+
+  .footer-content p {
+    font-size: 0.8rem;
+  }
+
+  .language-switcher button {
+    font-size: 0.75rem;
+    padding: 0.3rem 0.6rem;
+  }
+
+  /* Chat */
+  .chat-dialog {
+    width: 95%;
+    right: 2.5%;
+  }
+
+  .chat-toggle {
+    width: 48px;
+    height: 48px;
+  }
+
+  .chat-header {
+    font-size: 0.9rem;
+  }
+
+  .chat-body {
+    font-size: 0.9rem;
+  }
+
+  .chat-input input {
+    font-size: 0.85rem;
+  }
+
+  .chat-input button {
+    font-size: 0.85rem;
+  }
 }
 
+@media (max-width: 480px) {
+  body {
+    font-size: 13px;
+  }
+
+  .header h1 {
+    font-size: 1.5rem;
+  }
+
+  .header p {
+    font-size: 0.9rem;
+  }
+
+  .profile-pic {
+    width: 140px;
+    height: 140px;
+  }
+
+  .project-card h3 {
+    font-size: 1rem;
+  }
+
+  .project-card p {
+    font-size: 0.8rem;
+  }
+
+  .view-project-btn {
+    font-size: 0.8rem;
+  }
+
+  .testimonial {
+    font-size: 0.85rem;
+  }
+
+  .footer-content p {
+    font-size: 0.75rem;
+  }
+
+  .footer-social a {
+    font-size: 0.75rem;
+    padding: 0.3rem 0.6rem;
+  }
+}
