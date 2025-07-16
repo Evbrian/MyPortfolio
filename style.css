@@ -701,3 +701,147 @@ body.light-mode {
     --lighter: #000000;
     --accent: #e84393;
 }
+@media (max-width: 768px) {
+  /* Header adjustments */
+  .header h1 {
+    font-size: 2.2rem;
+  }
+
+  /* Profile */
+  .profile-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .profile-info {
+    padding: 1.5rem;
+    width: 100%;
+  }
+
+  /* Skills */
+  .skills-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Contact */
+  .contact-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .contact-links a {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Projects Section */
+  .projects-grid {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    overflow-x: hidden;
+  }
+
+  .project-card {
+    width: 90%;
+    max-width: 360px;
+    margin: 0 auto;
+    padding: 1.5rem;
+  }
+
+  .project-card h3 {
+    font-size: 1.3rem;
+  }
+
+  .project-card p {
+    font-size: 1rem;
+  }
+
+  .tech-used span {
+    font-size: 0.75rem;
+    padding: 0.3rem 0.6rem;
+  }
+
+  .view-project-btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  /* Testimonials */
+  .testimonial-form-section,
+  .testimonials-section {
+    padding: 2rem 1rem;
+  }
+
+  /* Footer */
+  .footer-social {
+    flex-wrap: wrap;
+    gap: 0.8rem;
+  }
+
+  .footer-social a {
+    width: auto;
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+  }
+
+  .language-switcher {
+    flex-direction: row;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  .language-switcher button {
+    font-size: 0.75rem;
+    padding: 0.3rem 0.6rem;
+  }
+
+  /* Chat Widget */
+  .chat-dialog {
+    width: 90%;
+    right: 5%;
+  }
+
+  .chat-toggle {
+    bottom: 20px;
+    right: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header h1 {
+    font-size: 2rem;
+  }
+
+  .profile-info h2,
+  .skills-section h2,
+  .contact-section h2,
+  .testimonial-form-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .project-card {
+    padding: 1rem;
+  }
+
+  .view-project-btn {
+    font-size: 0.85rem;
+    padding: 0.4rem 0.8rem;
+  }
+
+  .tech-used span {
+    font-size: 0.7rem;
+  }
+
+  .footer p {
+    font-size: 0.8rem;
+  }
+
+  .testimonial {
+    padding: 1.2rem;
+    font-size: 0.9rem;
+  }
+}
+
