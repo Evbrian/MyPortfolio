@@ -236,19 +236,31 @@
                     </div>
                 </div>
             </section>
-<section class="testimonial-form-section">
-  <h2>Share Your Testimonial</h2>
-  <p class="form-description">Have we worked together? Share your honest feedback below!</p>
-  <div class="testimonial-form-wrapper">
+<section class="testimonial-form-toggle" style="text-align: center; margin-top: 3rem;">
+  <h2 style="color: var(--primary); margin-bottom: 1rem;">Leave Your Testimonial</h2>
+
+  <button onclick="toggleForm()" style="
+    background: var(--accent);
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  ">
+    Open Testimonial Form
+  </button>
+
+  <div id="formContainer" style="display: none; margin-top: 2rem;">
     <iframe 
       src="https://docs.google.com/forms/d/e/1FAIpQLSdaGEEy3TdfT223d8xW0dTf7ZhmIbF7QmUML9xArApjXs_pNg/viewform?embedded=true" 
-      width="40%" 
-      height="100" 
+      width="100%" 
+      height="500" 
       frameborder="0" 
       marginheight="0" 
       marginwidth="0"
-      loading="lazy"
-      title="Submit a Testimonial">
+      style="max-width: 600px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.3); margin: auto;">
       Loading…
     </iframe>
   </div>
