@@ -291,10 +291,10 @@ body > .skiptranslate {
 }
 
 .footer-social {
-    display: flex;
-    justify-content: center;
-    gap: 1.25rem;
-    margin-bottom: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
 }
 
 .footer-social a {
