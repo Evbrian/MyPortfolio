@@ -666,125 +666,14 @@ body.light-mode {
     --light: #222222;
     --lighter: #000000;
     --accent: #e84393;
-}
-@media (max-width: 768px) {
-  /* Header adjustments */
-  .header h1 {
-    font-size: 2.2rem;
-  }
-
-  /* Profile */
-  .profile-section {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .profile-info {
-    padding: 1.5rem;
-    width: 100%;
-  }
-
-  /* Skills */
-  .skills-container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  /* Contact */
-  .contact-links {
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-  }
-
-  .contact-links a {
-    width: 100%;
-    justify-content: center;
-  }
-
-  /* Projects Section */
-  .projects-grid {
-    flex-direction: column;
-    align-items: center;
-    gap: 2rem;
-    overflow-x: hidden;
-  }
-
-  .project-card {
-    width: 90%;
-    max-width: 360px;
-    margin: 0 auto;
-    padding: 1.5rem;
-  }
-
-  .project-card h3 {
-    font-size: 1.3rem;
-  }
-
-  .project-card p {
-    font-size: 1rem;
-  }
-
-  .tech-used span {
-    font-size: 0.75rem;
-    padding: 0.3rem 0.6rem;
-  }
-
-  .view-project-btn {
-    padding: 0.5rem 1rem;
-    font-size: 0.9rem;
-  }
-
-  /* Testimonials */
-  .testimonial-form-section,
-  .testimonials-section {
-    padding: 2rem 1rem;
-  }
-
-  /* Footer */
-  .footer-social {
-    flex-wrap: wrap;
-    gap: 0.8rem;
-  }
-
-  .footer-social a {
-    width: auto;
-    padding: 0.5rem 1rem;
-    font-size: 0.85rem;
-  }
-
-  .language-switcher {
-    flex-direction: row;
-    justify-content: center;
-    gap: 0.5rem;
-  }
-
-  .language-switcher button {
-    font-size: 0.75rem;
-    padding: 0.3rem 0.6rem;
-  }
-
-  /* Chat Widget */
-  .chat-dialog {
-    width: 90%;
-    right: 5%;
-  }
-
-  .chat-toggle {
-    bottom: 20px;
-    right: 20px;
-  }
-}
-
-@media (max-width: 768px) {
-  /* General font and spacing reduction */
+}@media (max-width: 768px) {
   body {
     font-size: 14px;
     padding: 0 1rem;
   }
 
   .header {
-    padding: 3rem 1rem 2rem;
+    padding: 2.5rem 1rem 2rem;
   }
 
   .header h1 {
@@ -795,7 +684,6 @@ body.light-mode {
     font-size: 1rem;
   }
 
-  /* Profile Section */
   .profile-section {
     flex-direction: column;
     align-items: center;
@@ -803,8 +691,8 @@ body.light-mode {
   }
 
   .profile-pic {
-    width: 180px;
-    height: 180px;
+    width: 160px;
+    height: 160px;
   }
 
   .profile-info {
@@ -812,22 +700,22 @@ body.light-mode {
     width: 100%;
   }
 
-  .profile-info h2 {
-    font-size: 1.4rem;
-  }
-
-  .profile-info p {
-    font-size: 0.95rem;
-  }
-
-  /* Skills */
-  .skills-section h2 {
+  .skills-section h2,
+  .contact-section h2,
+  .projects-section h2 {
     font-size: 1.5rem;
   }
 
+  .skills-container,
+  .contact-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
   .skill-category {
-    padding: 1.2rem;
-    min-width: 220px;
+    padding: 1rem;
+    min-width: 90%;
   }
 
   .skill-category h3 {
@@ -835,31 +723,36 @@ body.light-mode {
   }
 
   .skill-category li {
-    font-size: 0.9rem;
-  }
-
-  /* Contact */
-  .contact-links {
-    flex-direction: column;
-    gap: 0.8rem;
+    font-size: 0.95rem;
   }
 
   .contact-links a {
-    padding: 0.6rem 1.2rem;
-    font-size: 0.9rem;
+    width: 100%;
+    justify-content: center;
+    font-size: 0.95rem;
   }
 
   /* Projects */
   .projects-grid {
+    display: flex;
     overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    padding-bottom: 1rem;
+    scroll-snap-type: x mandatory;
     gap: 1rem;
+    padding: 1rem 0;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
   }
 
   .project-card {
-    flex: 0 0 90%;
-    max-width: 90%;
+    flex: 0 0 85%;
+    max-width: 85%;
+    scroll-snap-align: start;
+    margin: 0 auto;
+  }
+
+  .view-project-btn {
+    font-size: 0.85rem;
+    padding: 0.5rem 1rem;
   }
 
   /* Testimonials */
@@ -868,33 +761,37 @@ body.light-mode {
     padding: 2rem 1rem;
   }
 
-  .testimonial-form-section h2,
-  .testimonials-section h2 {
-    font-size: 1.5rem;
+  .testimonial {
+    font-size: 0.9rem;
+    padding: 1rem;
   }
 
-  .testimonial {
-    padding: 1.2rem;
-    font-size: 0.9rem;
+  .testimonial-form-section h2,
+  .testimonials-section h2 {
+    font-size: 1.4rem;
   }
 
   /* Footer */
   .footer {
-    padding: 1.5rem 1rem;
+    padding: 2rem 1rem;
+    font-size: 0.8rem;
   }
 
   .footer-social {
-    gap: 0.6rem;
     flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.6rem;
+    margin-bottom: 1rem;
   }
 
   .footer-social a {
-    padding: 0.4rem 0.7rem;
-    font-size: 0.8rem;
+    font-size: 0.75rem;
+    padding: 0.4rem 0.8rem;
   }
 
   .footer-content p {
-    font-size: 0.8rem;
+    font-size: 0.75rem;
+    margin: 0.5rem 0;
   }
 
   .language-switcher button {
@@ -909,24 +806,10 @@ body.light-mode {
   }
 
   .chat-toggle {
-    width: 48px;
-    height: 48px;
-  }
-
-  .chat-header {
-    font-size: 0.9rem;
-  }
-
-  .chat-body {
-    font-size: 0.9rem;
-  }
-
-  .chat-input input {
-    font-size: 0.85rem;
-  }
-
-  .chat-input button {
-    font-size: 0.85rem;
+    width: 50px;
+    height: 50px;
+    bottom: 20px;
+    right: 20px;
   }
 }
 
@@ -940,7 +823,7 @@ body.light-mode {
   }
 
   .header p {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
   }
 
   .profile-pic {
@@ -949,27 +832,32 @@ body.light-mode {
   }
 
   .project-card h3 {
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
 
   .project-card p {
-    font-size: 0.8rem;
-  }
-
-  .view-project-btn {
-    font-size: 0.8rem;
-  }
-
-  .testimonial {
     font-size: 0.85rem;
   }
 
-  .footer-content p {
+  .view-project-btn {
     font-size: 0.75rem;
   }
 
+  .footer-content p {
+    font-size: 0.7rem;
+  }
+
   .footer-social a {
-    font-size: 0.75rem;
+    font-size: 0.7rem;
     padding: 0.3rem 0.6rem;
   }
+}
+.projects-section::after {
+  content: 'Swipe →';
+  text-align: center;
+  display: block;
+  font-size: 0.8rem;
+  opacity: 0.6;
+  margin-top: -0.5rem;
+  color: #ccc;
 }
