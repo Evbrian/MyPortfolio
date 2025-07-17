@@ -213,70 +213,44 @@
             </section>
 
             <!-- Testimonials Section -->
-            <section class="testimonials-section">
-    <h2>What People Say</h2>
-    <div class="testimonial-carousel">
-        <div class="testimonial active">
-            <p>"Brian delivered exceptional work on our web project. His attention to detail and problem-solving skills were impressive."</p>
-            <div class="client-info">
-                <div class="client-name">John Doe</div>
-                <div class="client-title">CTO, Tech Solutions Ltd</div>
-            </div>
-        </div>
-
-        <div class="testimonial">
-            <p>"His networking expertise helped us resolve critical infrastructure issues that had been plaguing our systems for months."</p>
-            <div class="client-info">
-                <div class="client-name">Jane Smith</div>
-                <div class="client-title">IT Director, University</div>
-            </div>
-        </div>
-
-        <div class="testimonial">
-            <p>“Brian is exceptionally talented. His attention to detail and ability to turn ideas into reality is unmatched. Our system works flawlessly now.”</p>
-            <div class="client-info">
-                <div class="client-name">Grace M.</div>
-                <div class="client-title">Systems Analyst</div>
-            </div>
-        </div>
-
-        <div class="testimonial">
-            <p>“I collaborated with Brian on a university tracking system. He was professional, committed, and delivered before the deadline. Highly recommended!”</p>
-            <div class="client-info">
-                <div class="client-name">Dr. Kibet O.</div>
-                <div class="client-title">University Supervisor</div>
-            </div>
-        </div>
-
-        <div class="testimonial">
-            <p>“I hired Brian to build a business website. Not only did he exceed my expectations, but he also made it mobile-responsive and user-friendly.”</p>
-            <div class="client-info">
-                <div class="client-name">James W.</div>
-                <div class="client-title">Entrepreneur</div>
-            </div>
-        </div>
-
-        <div class="testimonial">
-            <p>“Working with Brian was a pleasure. His React and backend skills are top-tier, and he maintains good communication throughout the project.”</p>
-            <div class="client-info">
-                <div class="client-name">Lydia N.</div>
-                <div class="client-title">Software Consultant</div>
-            </div>
-        </div>
-
-        <div class="testimonial">
-            <p>“Brian is a reliable developer who always delivers clean code and great UX design. His professionalism stands out.”</p>
-            <div class="client-info">
-                <div class="client-name">Kevin M.</div>
-                <div class="client-title">UI/UX Designer</div>
-            </div>
-        </div>
-
-        <div class="carousel-controls">
-            <button class="prev-btn"><i class="fas fa-chevron-left"></i></button>
-            <button class="next-btn"><i class="fas fa-chevron-right"></i></button>
-        </div>
+           <section class="testimonials-section">
+  <h2>What People Say</h2>
+  <div class="testimonial-carousel">
+    <div class="testimonial active">
+      <p>"Brian delivered exceptional work on our web project. His attention to detail and problem-solving skills were impressive."</p>
+      <div class="client-info">
+        <div class="client-name">John Doe</div>
+        <div class="client-title">CTO, Tech Solutions Ltd</div>
+      </div>
     </div>
+    <div class="testimonial">
+      <p>"His networking expertise helped us resolve critical infrastructure issues that had been plaguing our systems for months."</p>
+      <div class="client-info">
+        <div class="client-name">Jane Smith</div>
+        <div class="client-title">IT Director, University</div>
+      </div>
+    </div>
+    <div class="testimonial">
+      <p>"Brian's frontend designs are both visually appealing and highly functional. Highly recommend working with him."</p>
+      <div class="client-info">
+        <div class="client-name">Samuel Karanja</div>
+        <div class="client-title">Lead Designer, SoftCom</div>
+      </div>
+    </div>
+    <div class="testimonial">
+      <p>"We trusted Brian with our backend systems and he optimized our database and API performance beyond expectations."</p>
+      <div class="client-info">
+        <div class="client-name">Ann Wanjiku</div>
+        <div class="client-title">DevOps Engineer, CloudTech</div>
+      </div>
+    </div>
+
+    <!-- Move controls OUTSIDE of testimonial divs -->
+    <div class="carousel-controls">
+      <button class="prev-btn"><i class="fas fa-chevron-left"></i></button>
+      <button class="next-btn"><i class="fas fa-chevron-right"></i></button>
+    </div>
+  </div>
 </section>
 
       <!--Testmonial Form-->
@@ -412,6 +386,31 @@
         : '<i class="fas fa-times"></i> Hide Form';
     });
   });
+
+    const testimonials = document.querySelectorAll('.testimonial');
+  const prevBtn = document.querySelector('.prev-btn');
+  const nextBtn = document.querySelector('.next-btn');
+  let currentIndex = 0;
+
+  function showTestimonial(index) {
+    testimonials.forEach((testimonial, i) => {
+      testimonial.classList.toggle('active', i === index);
+    });
+  }
+
+  prevBtn.addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + testimonials.length) % testimonials.length;
+    showTestimonial(currentIndex);
+  });
+
+  nextBtn.addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % testimonials.length;
+    showTestimonial(currentIndex);
+  });
+
+  // Initialize
+  showTestimonial(currentIndex);
+
     // Theme Toggle
    // Theme Toggle (Fixed)
 document.getElementById("theme-toggle").addEventListener("click", function () {
