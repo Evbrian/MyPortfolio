@@ -514,11 +514,14 @@ body > .skiptranslate {
     border-radius: 10px;
     font-style: italic;
     color: #ddd;
-    transition: opacity 0.5s ease;
+    transition: opacity 1s ease-in-out;
+    position: absolute;
+    opacity: 0;
 }
 
 .testimonial.active {
-    display: block;
+    opacity: 1;
+  position: relative;
 }
 
 .client-info {
