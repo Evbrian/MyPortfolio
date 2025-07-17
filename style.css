@@ -505,23 +505,28 @@ body > .skiptranslate {
     margin: 0 auto;
 }
 
-
 .testimonial {
-    display: none;
-    background: #1e1e1e;
-    border-left: 4px solid var(--primary);
-    padding: 2rem;
-    border-radius: 10px;
-    font-style: italic;
-    color: #ddd;
-    transition: opacity 1s ease-in-out;
-    position: absolute;
-    opacity: 0;
+  background: #1e1e1e;
+  border-left: 4px solid var(--primary);
+  padding: 2rem;
+  border-radius: 10px;
+  font-style: italic;
+  color: #ddd;
+  transition: opacity 1s ease-in-out;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  z-index: 0;
+  pointer-events: none;
 }
 
 .testimonial.active {
-    opacity: 1;
+  opacity: 1;
   position: relative;
+  z-index: 1;
+  pointer-events: auto;
 }
 
 .client-info {
