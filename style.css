@@ -9,12 +9,15 @@
 }
 
 /* Dark theme overrides */
-body.dark-theme {
+.dark-theme {
+  --primary: #6c5ce7;
   --dark: #121212;
   --darker: #0a0a0a;
   --light: #e0e0e0;
   --lighter: #ffffff;
+  --accent: #fd79a8;
 }
+
 body {
   transition: background-color 0.4s ease, color 0.4s ease;
 }
