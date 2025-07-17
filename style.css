@@ -410,8 +410,8 @@ body > .skiptranslate {
 }
 
 .tech-used span {
-  background-color: var(--light);
-  color: #000;
+   background-color: #dce3ec;
+  color: #333;
   padding: 6px 14px;
   border-radius: 20px;
   font-size: 0.85rem;
