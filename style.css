@@ -409,7 +409,7 @@ body > .skiptranslate {
 }
 
 .tech-used span {
-  background-color: #eef1f6;
+  background-color: #dce3ec;
   color: #333;
   font-weight: 500;
   padding: 6px 12px;
@@ -419,11 +419,6 @@ body > .skiptranslate {
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.tech-used span:hover {
-  background-color: #dce3ec;
-  transform: scale(1.05);
-  cursor: default;
-}
 
 .projects-grid {
   display: flex;
