@@ -401,22 +401,29 @@ body > .skiptranslate {
     color: white;
     transform: scale(1.05);
 }
+
 .tech-used {
   margin-top: 10px;
   display: flex;
-  flex-wrap: wrap;
   gap: 10px;
+  flex-wrap: wrap;
 }
 
 .tech-used span {
-  background-color: #dce3ec;
-  color: #333;
-  font-weight: 500;
-  padding: 6px 12px;
-  border-radius: 25px;
-  font-size: 0.9rem;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  background-color: var(--light);
+  color: #000;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Dark Theme Support */
+body.dark-theme .tech-used span {
+  background-color: #1e1e1e;
+  color: #fff;
+  box-shadow: 0 1px 3px rgba(255,255,255,0.1);
 }
 
 
