@@ -9,7 +9,7 @@
 }
 
 /* Dark theme overrides */
-.dark-theme {
+body.light-mode {
   --primary: #6c5ce7;
   --dark: #121212;
   --darker: #0a0a0a;
