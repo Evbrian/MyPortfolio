@@ -18,10 +18,6 @@
   --accent: #fd79a8;
 }
 
-body {
-  transition: background-color 0.4s ease, color 0.4s ease;
-}
-
 /* Base Styles */
 * {
     margin: 0;
@@ -36,6 +32,7 @@ body {
     line-height: 1.6;
     min-height: 100vh;
     position: relative; /* For translate dropdown positioning */
+ transition: background-color 0.4s ease, color 0.4s ease;
 }
 
 .portfolio-container {
@@ -520,12 +517,12 @@ body > .skiptranslate {
 }
 
 .testimonial {
-  background: #1e1e1e;
+    background-color: #ffffff; /* white background */
+    color: #000000; /* black text */
   border-left: 4px solid var(--primary);
   padding: 2rem;
   border-radius: 10px;
   font-style: italic;
-  color: #ddd;
   transition: opacity 1s ease-in-out;
   position: absolute;
   top: 0;
