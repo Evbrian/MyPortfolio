@@ -213,39 +213,39 @@
             </section>
 
             <!-- Testimonials Section -->
-           <section class="testimonials-section">
+         <section class="testimonials-section">
   <h2>What People Say</h2>
   <div class="testimonial-carousel">
-    <div class="testimonial active">
-      <p>"Brian delivered exceptional work on our web project. His attention to detail and problem-solving skills were impressive."</p>
-      <div class="client-info">
-        <div class="client-name">John Doe</div>
-        <div class="client-title">CTO, Tech Solutions Ltd</div>
+    <div class="testimonial-track">
+      <div class="testimonial">
+        <p>"Brian delivered exceptional work on our web project. His attention to detail and problem-solving skills were impressive."</p>
+        <div class="client-info">
+          <div class="client-name">John Doe</div>
+          <div class="client-title">CTO, Tech Solutions Ltd</div>
+        </div>
+      </div>
+      <div class="testimonial">
+        <p>"His networking expertise helped us resolve critical infrastructure issues that had been plaguing our systems for months."</p>
+        <div class="client-info">
+          <div class="client-name">Jane Smith</div>
+          <div class="client-title">IT Director, University</div>
+        </div>
+      </div>
+      <div class="testimonial">
+        <p>"Brian's frontend designs are both visually appealing and highly functional. Highly recommend working with him."</p>
+        <div class="client-info">
+          <div class="client-name">Samuel Karanja</div>
+          <div class="client-title">Lead Designer, SoftCom</div>
+        </div>
+      </div>
+      <div class="testimonial">
+        <p>"We trusted Brian with our backend systems and he optimized our database and API performance beyond expectations."</p>
+        <div class="client-info">
+          <div class="client-name">Ann Wanjiku</div>
+          <div class="client-title">DevOps Engineer, CloudTech</div>
+        </div>
       </div>
     </div>
-    <div class="testimonial">
-      <p>"His networking expertise helped us resolve critical infrastructure issues that had been plaguing our systems for months."</p>
-      <div class="client-info">
-        <div class="client-name">Jane Smith</div>
-        <div class="client-title">IT Director, University</div>
-      </div>
-    </div>
-    <div class="testimonial">
-      <p>"Brian's frontend designs are both visually appealing and highly functional. Highly recommend working with him."</p>
-      <div class="client-info">
-        <div class="client-name">Samuel Karanja</div>
-        <div class="client-title">Lead Designer, SoftCom</div>
-      </div>
-    </div>
-    <div class="testimonial">
-      <p>"We trusted Brian with our backend systems and he optimized our database and API performance beyond expectations."</p>
-      <div class="client-info">
-        <div class="client-name">Ann Wanjiku</div>
-        <div class="client-title">DevOps Engineer, CloudTech</div>
-      </div>
-    </div>
-
-    <!-- Move controls OUTSIDE of testimonial divs -->
     <div class="carousel-controls">
       <button class="prev-btn"><i class="fas fa-chevron-left"></i></button>
       <button class="next-btn"><i class="fas fa-chevron-right"></i></button>
@@ -386,30 +386,39 @@
         : '<i class="fas fa-times"></i> Hide Form';
     });
   });
-
-    const testimonials = document.querySelectorAll('.testimonial');
+/*Testmonials*/
+    const track = document.querySelector('.testimonial-track');
+  const testimonials = document.querySelectorAll('.testimonial');
   const prevBtn = document.querySelector('.prev-btn');
   const nextBtn = document.querySelector('.next-btn');
   let currentIndex = 0;
 
-  function showTestimonial(index) {
-    testimonials.forEach((testimonial, i) => {
-      testimonial.classList.toggle('active', i === index);
-    });
+  function updateCarousel() {
+    const width = testimonials[0].clientWidth;
+    track.style.transform = `translateX(-${currentIndex * width}px)`;
   }
-
-  prevBtn.addEventListener('click', () => {
-    currentIndex = (currentIndex - 1 + testimonials.length) % testimonials.length;
-    showTestimonial(currentIndex);
-  });
 
   nextBtn.addEventListener('click', () => {
     currentIndex = (currentIndex + 1) % testimonials.length;
-    showTestimonial(currentIndex);
+    updateCarousel();
   });
 
-  // Initialize
-  showTestimonial(currentIndex);
+  prevBtn.addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + testimonials.length) % testimonials.length;
+    updateCarousel();
+  });
+
+  // Auto-slide every 5 seconds
+  setInterval(() => {
+    currentIndex = (currentIndex + 1) % testimonials.length;
+    updateCarousel();
+  }, 5000);
+
+  // Responsive resize fix
+  window.addEventListener('resize', updateCarousel);
+
+  // Initialize position
+  updateCarousel();
 
     // Theme Toggle
    // Theme Toggle (Fixed)
