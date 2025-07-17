@@ -5,8 +5,9 @@
   --darker: #f0f0f0;
   --light: #333333;
   --lighter: #000000;
-  --accent: #fd79a8;
+  --accent: #e84393;
 }
+
 
 /* Dark theme overrides */
 body.light-mode {
