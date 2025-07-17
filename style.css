@@ -684,13 +684,6 @@ body > .skiptranslate {
 }
 
 
-/* Light Theme Overrides */
-body.light-mode {
-    --dark: #f2f2f2;
-    --darker: #ffffff;
-    --light: #222222;
-    --lighter: #000000;
-    --accent: #e84393;
 }@media (max-width: 768px) {
   body {
     font-size: 14px;
