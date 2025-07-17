@@ -1,11 +1,22 @@
-/* Dark Theme Variables */
+ /* Light theme (default) */
 :root {
-    --primary: #6c5ce7;
-    --dark: #121212;
-    --darker: #0a0a0a;
-    --light: #e0e0e0;
-    --lighter: #ffffff;
-    --accent: #fd79a8;
+  --primary: #6c5ce7;
+  --dark: #ffffff;
+  --darker: #f0f0f0;
+  --light: #333333;
+  --lighter: #000000;
+  --accent: #fd79a8;
+}
+
+/* Dark theme overrides */
+body.dark-theme {
+  --dark: #121212;
+  --darker: #0a0a0a;
+  --light: #e0e0e0;
+  --lighter: #ffffff;
+}
+body {
+  transition: background-color 0.4s ease, color 0.4s ease;
 }
 
 /* Base Styles */
@@ -17,11 +28,11 @@
 }
 
 body {
-    background-color: var(--dark);
-    color: var(--light);
+    background-color: #ffffff; /* white background */
+    color: #000000; /* black text */
     line-height: 1.6;
     min-height: 100vh;
-    position: relative; /* Added for translate dropdown positioning */
+    position: relative; /* For translate dropdown positioning */
 }
 
 .portfolio-container {
