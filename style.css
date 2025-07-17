@@ -11,10 +11,8 @@
 
 /* Dark theme overrides */
 body.light-mode {
-  --background: #121212; /* almost black */
-  --text-color: #ffffff; /* white text */
-  --primary: #6c5ce7;
-  --accent: #fd79a8;
+  --background: #121212;
+  --text-color: #ffffff;
 }
 
 }
