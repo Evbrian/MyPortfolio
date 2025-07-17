@@ -401,6 +401,29 @@ body > .skiptranslate {
     color: white;
     transform: scale(1.05);
 }
+.tech-used {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tech-used span {
+  background-color: #eef1f6;
+  color: #333;
+  font-weight: 500;
+  padding: 6px 12px;
+  border-radius: 25px;
+  font-size: 0.9rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.tech-used span:hover {
+  background-color: #dce3ec;
+  transform: scale(1.05);
+  cursor: default;
+}
 
 .projects-grid {
   display: flex;
