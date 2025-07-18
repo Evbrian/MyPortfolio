@@ -876,3 +876,164 @@ body > .skiptranslate {
   margin-top: -0.5rem;
   color: #ccc;
 }
+
+/*Deepseek*/
+/* ===== Mobile-First Adjustments (max-width: 767px) ===== */
+@media (max-width: 767px) {
+  /* Header & Hero */
+  .hero {
+    text-align: center;
+  }
+  
+  .resume-btn {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  /* About Section */
+  .profile-section {
+    flex-direction: column;
+  }
+  
+  .profile-pic {
+    margin: 0 auto 20px;
+    max-width: 200px;
+  }
+
+  /* Skills */
+  .skills-container {
+    grid-template-columns: 1fr !important;
+    gap: 30px;
+  }
+
+  /* Projects */
+  .projects-grid {
+    grid-template-columns: 1fr !important;
+  }
+  
+  .project-nav {
+    display: none !important;
+  }
+
+  /* Testimonials */
+  .testimonial-carousel {
+    padding: 0 15px;
+  }
+  
+  .carousel-controls {
+    position: static;
+    margin-top: 20px;
+    justify-content: center;
+  }
+
+  /* Experience Timeline */
+  .timeline-item {
+    flex-direction: column;
+  }
+  
+  .timeline-date {
+    width: 100%;
+    margin-bottom: 10px;
+    text-align: left;
+  }
+
+  /* Footer */
+  .footer-social {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .footer-content p {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
+
+/* ===== Tablet (768px - 1023px) ===== */
+@media (min-width: 768px) and (max-width: 1023px) {
+  /* Projects Grid */
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  /* Skills */
+  .skills-container {
+    grid-template-columns: 1fr 1fr !important;
+  }
+
+  /* Testimonials */
+  .testimonial-carousel {
+    max-width: 80%;
+    margin: 0 auto;
+  }
+}
+
+/* ===== Desktop (min-width: 1024px) ===== */
+@media (min-width: 1024px) {
+  /* Project Carousel */
+  .projects-carousel-wrapper {
+    position: relative;
+  }
+  
+  .project-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+  }
+  
+  .project-nav.prev {
+    left: -40px;
+  }
+  
+  .project-nav.next {
+    right: -40px;
+  }
+
+  /* Testimonial Controls */
+  .carousel-controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    justify-content: space-between;
+    transform: translateY(-50%);
+  }
+}
+
+/* ===== Large Desktop (min-width: 1200px) ===== */
+@media (min-width: 1200px) {
+  /* Project Grid */
+  .projects-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+}
+
+/* ===== Ultra-Wide Screens (min-width: 1600px) ===== */
+@media (min-width: 1600px) {
+  .portfolio-container {
+    max-width: 1500px;
+    margin: 0 auto;
+  }
+}
+
+/* ===== Print Styles ===== */
+@media print {
+  .chat-toggle,
+  .project-nav,
+  .theme-btn,
+  #google_translate_element {
+    display: none !important;
+  }
+  
+  body {
+    padding: 20px;
+    color: #000 !important;
+    background: #fff !important;
+  }
+  
+  a {
+    text-decoration: none !important;
+    color: #000 !important;
+  }
+}
