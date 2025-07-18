@@ -810,6 +810,42 @@ body > .skiptranslate {
 body { 
  font-size: 12px; 
 } 
+  /* Header */
+  .hero h1 {
+    font-size: 1.8rem !important; /* Scales with <body> */
+  }
+  .tagline {
+    font-size: 1rem !important;
+  }
+
+  /* About Section */
+  .profile-info h2 {
+    font-size: 1.5rem !important;
+  }
+  .profile-info p {
+    font-size: 0.9rem !important;
+  }
+
+  /* Social Media Links */
+  .footer-social a {
+    font-size: 0.8rem !important;
+  }
+
+  /* Testimonials */
+  .testimonial p {
+    font-size: 0.95rem !important;
+  }
+  .client-name, .client-title {
+    font-size: 0.85rem !important;
+  }
+
+  /* Project Descriptions */
+  .project-card p {
+    font-size: 0.9rem !important;
+  }
+  .project-card h3 {
+    font-size: 1.1rem !important;
+  }
   /* Skills */
   .skills-container {
     grid-template-columns: 1fr !important;
