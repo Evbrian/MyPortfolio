@@ -786,30 +786,7 @@ body > .skiptranslate {
     font-size: 1.4rem;
   }
 
-  /* Footer */
-  .footer {
-    padding: 2rem 1rem;
-    font-size: 0.8rem;
-  }
-
-  .footer-social {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 0.6rem;
-    margin-bottom: 1rem;
-  }
-
-  .footer-social a {
-    font-size: 0.75rem;
-    padding: 0.4rem 0.8rem;
-  }
-
-  .footer-content p {
-    font-size: 0.75rem;
-    margin: 0.5rem 0;
-  }
-
-  .language-switcher button {
+ .language-switcher button {
     font-size: 0.75rem;
     padding: 0.3rem 0.6rem;
   }
