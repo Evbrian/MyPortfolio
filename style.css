@@ -683,7 +683,7 @@ body > .skiptranslate {
 
 }@media (max-width: 768px) {
   body {
-    font-size: 14px;
+    font-size: 8px;
     padding: 0 1rem;
   }
 
@@ -807,7 +807,9 @@ body > .skiptranslate {
 /*Deepseek*/
 /* ===== Mobile-First Adjustments (max-width: 767px) ===== */
 @media (max-width: 767px) {
-
+body { 
+ font-size: 8px; 
+} 
   /* Skills */
   .skills-container {
     grid-template-columns: 1fr !important;
