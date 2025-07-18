@@ -830,16 +830,6 @@ body > .skiptranslate {
 /*Deepseek*/
 /* ===== Mobile-First Adjustments (max-width: 767px) ===== */
 @media (max-width: 767px) {
-  /* Header & Hero */
-  .hero {
-    text-align: center;
-  }
-  
-  .resume-btn {
-    display: block;
-    width: 100%;
-    margin-bottom: 10px;
-  }
 
   /* Skills */
   .skills-container {
@@ -878,15 +868,28 @@ body > .skiptranslate {
     text-align: left;
   }
 
-  /* Footer */
-  .footer-social {
-    flex-direction: column;
-    gap: 10px;
+ /* CV Buttons in Hero */
+  .hero .resume-btn {
+    display: inline-block !important; /* Prevents full-width */
+    width: auto !important; 
+    padding: 0.6rem 1.2rem !important; /* Smaller padding */
+    margin: 0 0.5rem 0.5rem 0 !important; /* Tight spacing */
+    font-size: 0.9rem !important; /* Optional: Reduce text size */
   }
-  
-  .footer-content p {
-    flex-direction: column;
-    gap: 8px;
+
+  /* Social Media Links in Footer */
+  .footer-social a {
+    padding: 0.4rem 0.8rem !important; /* Compact padding */
+    margin: 0 0.3rem 0.3rem 0 !important; /* Tight spacing */
+    font-size: 0.85rem !important; /* Optional: Smaller icons/text */
+  }
+
+  /* Ensure buttons stay in a tight grid */
+  .footer-social {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 0.3rem !important; /* Minimal gap */
   }
 }
 
@@ -906,6 +909,12 @@ body > .skiptranslate {
   .testimonial-carousel {
     max-width: 80%;
     margin: 0 auto;
+  }
+ .hero .resume-btn {
+    padding: 0.7rem 1.4rem !important;
+  }
+  .footer-social a {
+    padding: 0.5rem 1rem !important;
   }
 }
 
