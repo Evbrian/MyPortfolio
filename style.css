@@ -878,18 +878,14 @@ body > .skiptranslate {
   }
 
   /* Social Media Links in Footer */
-  .footer-social a {
-    padding: 0.4rem 0.8rem !important; /* Compact padding */
-    margin: 0 0.3rem 0.3rem 0 !important; /* Tight spacing */
-    font-size: 0.85rem !important; /* Optional: Smaller icons/text */
-  }
-
-  /* Ensure buttons stay in a tight grid */
   .footer-social {
     display: flex !important;
-    flex-wrap: wrap !important;
-    justify-content: center !important;
-    gap: 0.3rem !important; /* Minimal gap */
+    flex-wrap: nowrap !important;
+    gap: 0.3rem !important; /* Ultra-tight spacing */
+  }
+  .footer-social a {
+    padding: 0.4rem 0.6rem !important;
+    font-size: 0.8rem !important;
   }
 }
 
