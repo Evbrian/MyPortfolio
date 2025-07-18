@@ -680,7 +680,7 @@ body > .skiptranslate {
     background: var(--accent);
 }
 
-
+/*
 }@media (max-width: 768px) {
   body {
     font-size: 14px;
@@ -747,7 +747,7 @@ body > .skiptranslate {
     font-size: 0.95rem;
   }
 
-  /* Projects */
+  /* Projects *//*
   .projects-grid {
     display: flex;
     overflow-x: auto;
@@ -770,7 +770,7 @@ body > .skiptranslate {
     padding: 0.5rem 1rem;
   }
 
-  /* Testimonials */
+  /* Testimonials *//*
   .testimonial-form-section,
   .testimonials-section {
     padding: 2rem 1rem;
@@ -791,7 +791,7 @@ body > .skiptranslate {
     padding: 0.3rem 0.6rem;
   }
 
-  /* Chat */
+  /* Chat *//*
   .chat-dialog {
     width: 95%;
     right: 2.5%;
@@ -803,12 +803,12 @@ body > .skiptranslate {
     bottom: 20px;
     right: 20px;
   }
-}
+}*/
 /*Deepseek*/
 /* ===== Mobile-First Adjustments (max-width: 767px) ===== */
 @media (max-width: 767px) {
 body { 
- font-size: 8px; 
+ font-size: 12px; 
 } 
   /* Skills */
   .skills-container {
@@ -853,7 +853,7 @@ body {
     width: auto !important; 
     padding: 0.6rem 1.2rem !important; /* Smaller padding */
     margin: 0 0.5rem 0.5rem 0 !important; /* Tight spacing */
-    font-size: 0.9rem !important; /* Optional: Reduce text size */
+    /*font-size: 0.9rem !important; /* Optional: Reduce text size */
   }
 
   /* Social Media Links in Footer */
@@ -863,6 +863,7 @@ body {
     overflow: hidden !important; /* Hide scrollbar */
     gap: 10px !important;
     width: 100%;
+    font-size:12px;
   }
   
   .footer-social a {
