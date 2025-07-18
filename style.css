@@ -857,23 +857,16 @@ body > .skiptranslate {
   /* Social Media Links in Footer */
    .footer-social {
     display: flex !important;
-    flex-wrap: nowrap !important; /* Prevent wrapping */
-    overflow-x: auto !important; /* Enable horizontal scroll */
-    gap: 0.8rem !important;
-    padding-bottom: 0.5rem !important; /* Space for scrollbar */
-    -webkit-overflow-scrolling: touch !important; /* Smooth scroll on iOS */
+    flex-wrap: nowrap !important;
+    overflow: hidden !important; /* Hide scrollbar */
+    gap: 10px !important;
+    width: 100%;
   }
-
+  
   .footer-social a {
-    flex-shrink: 0 !important; /* Prevent shrinking */
-    white-space: nowrap !important; /* Keep text in one line */
-    padding: 0.5rem 0.8rem !important;
-    font-size: 0.85rem !important;
-  }
-
-  /* Hide scrollbar visually (optional) */
-  .footer-social::-webkit-scrollbar {
-    display: none !important;
+    flex: 0 0 auto !important;
+    padding: 6px 12px !important;
+    white-space: nowrap !important;
   }
 }
 
