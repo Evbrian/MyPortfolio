@@ -680,131 +680,7 @@ body > .skiptranslate {
     background: var(--accent);
 }
 
-/*
-}@media (max-width: 768px) {
-  body {
-    font-size: 14px;
-    padding: 0 1rem;
-  }
 
-  .header {
-    padding: 2.5rem 1rem 2rem;
-  }
-
-  .header h1 {
-    font-size: 1.8rem;
-  }
-
-  .header p {
-    font-size: 1rem;
-  }
-
-  .profile-section {
-    flex-direction: column;
-    align-items: center;
-    gap: 1.5rem;
-  }
-
-  .profile-pic {
-    width: 160px;
-    height: 160px;
-  }
-
-  .profile-info {
-    padding: 1.2rem;
-    width: 100%;
-  }
-
-  .skills-section h2,
-  .contact-section h2,
-  .projects-section h2 {
-    font-size: 1.5rem;
-  }
-
-  .skills-container,
-  .contact-links {
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-  }
-
-  .skill-category {
-    padding: 1rem;
-    min-width: 90%;
-  }
-
-  .skill-category h3 {
-    font-size: 1.2rem;
-  }
-
-  .skill-category li {
-    font-size: 0.95rem;
-  }
-
-  .contact-links a {
-    width: 100%;
-    justify-content: center;
-    font-size: 0.95rem;
-  }
-
-  /* Projects *//*
-  .projects-grid {
-    display: flex;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    gap: 1rem;
-    padding: 1rem 0;
-    scroll-behavior: smooth;
-    -webkit-overflow-scrolling: touch;
-  }
-
-  .project-card {
-    flex: 0 0 85%;
-    max-width: 85%;
-    scroll-snap-align: start;
-    margin: 0 auto;
-  }
-
-  .view-project-btn {
-    font-size: 0.85rem;
-    padding: 0.5rem 1rem;
-  }
-
-  /* Testimonials *//*
-  .testimonial-form-section,
-  .testimonials-section {
-    padding: 2rem 1rem;
-  }
-
-  .testimonial {
-    font-size: 0.9rem;
-    padding: 1rem;
-  }
-
-  .testimonial-form-section h2,
-  .testimonials-section h2 {
-    font-size: 1.4rem;
-  }
-
- .language-switcher button {
-    font-size: 0.75rem;
-    padding: 0.3rem 0.6rem;
-  }
-
-  /* Chat *//*
-  .chat-dialog {
-    width: 95%;
-    right: 2.5%;
-  }
-
-  .chat-toggle {
-    width: 50px;
-    height: 50px;
-    bottom: 20px;
-    right: 20px;
-  }
-}*/
-/*Deepseek*/
 /* ===== Mobile-First Adjustments (max-width: 767px) ===== */
 @media (max-width: 767px) {
 body { 
@@ -815,7 +691,7 @@ body {
     font-size: 1.8rem !important; /* Scales with <body> */
   }
   .tagline {
-    font-size: 1rem !important;
+    font-size: 0.7rem !important;
   }
 
   /* About Section */
@@ -833,18 +709,18 @@ body {
 
   /* Testimonials */
   .testimonial p {
-    font-size: 0.95rem !important;
+    font-size: 0.75rem !important;
   }
   .client-name, .client-title {
-    font-size: 0.85rem !important;
+    font-size: 0.65rem !important;
   }
 
   /* Project Descriptions */
   .project-card p {
-    font-size: 0.9rem !important;
+    font-size: 0.7rem !important;
   }
   .project-card h3 {
-    font-size: 1.1rem !important;
+    font-size: 0.9rem !important;
   }
   /* Skills */
   .skills-container {
