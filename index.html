@@ -422,6 +422,40 @@
   }
 
   autoSwipeTestimonials();
+
+    document.addEventListener('DOMContentLoaded', function() {
+  const socialContainer = document.querySelector('.footer-social');
+  
+  if (window.innerWidth <= 767 && socialContainer) {
+    const socialLinks = socialContainer.querySelectorAll('a');
+    const containerWidth = socialContainer.offsetWidth;
+    let linksWidth = 0;
+    
+    // Calculate total width of all links
+    socialLinks.forEach(link => {
+      linksWidth += link.offsetWidth + 10; // 10px for gap
+    });
+    
+    // Only animate if content overflows
+    if (linksWidth > containerWidth) {
+      socialContainer.style.position = 'relative';
+      
+      // Create animation style
+      const style = document.createElement('style');
+      style.textContent = `
+        @keyframes autoScroll {
+          0% { transform: translateX(0); }
+          100% { transform: translateX(calc(${containerWidth}px - ${linksWidth}px)); }
+        }
+        .footer-social a {
+          animation: autoScroll ${linksWidth/50}s linear infinite alternate;
+        }
+      `;
+      document.head.appendChild(style);
+    }
+  }
+});
+    
     // Theme Toggle
     // Theme Toggle (Fixed)
 document.getElementById("theme-toggle").addEventListener("click", function () {
