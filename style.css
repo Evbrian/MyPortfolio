@@ -918,15 +918,11 @@ body {
     text-align: center;
   }
   
+ 
   .profile-pic {
-    width: 250px !important;  /* Explicit equal dimensions */
-    height: 250px !important; 
-    min-width: 250px !important; /* Prevents shrinkage */
-    min-height: 250px !important;
-    margin: 0 auto 1.5rem !important;
-    border-radius: 50% !important;
-    object-fit: cover !important; /* Ensures no distortion */
-    aspect-ratio: 1/1 !important; /* Fallback for modern browsers */
+    margin: 0 auto 2rem !important;
+    max-width: 200px !important;
+    border-radius: 50% !important; /* Ensures circular image on mobile */
   }
   
   .profile-info {
