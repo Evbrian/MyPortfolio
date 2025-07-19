@@ -63,29 +63,6 @@ body {
     opacity: 0.8;
     font-weight: 300;
 }
-.goog-te-menu-frame {
-  position: absolute !important;
-  top: 60px !important;
-  z-index: 999999 !important;
-  width: auto !important;
-  height: auto !important;
-}
-
-.skiptranslate iframe {
-  display: block !important;
-}
-
-body > .skiptranslate {
-  display: none !important;
-}
-
-#google_translate_element {
-  position: relative;
-  z-index: 999;
-  margin: 20px auto;
-  display: flex;
-  justify-content: center;
-}
 
 /* Theme Toggle Button Position and Style */
 .theme-btn {
@@ -326,23 +303,52 @@ body > .skiptranslate {
 .footer-social a:nth-child(5) { background-color: #0077b5; } /* LinkedIn */
 .footer-social a:nth-child(6) { background-color: #1da1f2; } /* Twitter */
 
- /* Hide Google branding */
-    .goog-te-banner-frame, .goog-logo-link, 
-    .goog-te-gadget-icon { display: none !important; }
-    
-    /* Reset body positioning */
-    body { top: 0 !important; }
-    
-    /* Style the language dropdown */
-    .goog-te-combo {
-      padding: 8px 12px;
-      border-radius: 4px;
-      border: 1px solid #6c5ce7;
-      background: white;
-      color: #333;
-      font-family: 'DM Sans', sans-serif;
-    }
-    
+
+  /* ===== Google Translate Widget Styling ===== */
+/* Hide Google branding */
+.goog-te-banner-frame, 
+.goog-logo-link, 
+.goog-te-gadget-icon { 
+  display: none !important; 
+}
+
+/* Reset body positioning (fixes Google Translate's top offset) */
+body { 
+  top: 0 !important; 
+}
+
+/* Style the language dropdown (Desktop) */
+.goog-te-combo {
+  padding: 8px 12px;
+  border-radius: 4px;
+  border: 1px solid #6c5ce7; /* Your purple border */
+  background: white;
+  color: #333;
+  font-family: 'DM Sans', sans-serif; /* Custom font */
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Hover effect (optional) */
+.goog-te-combo:hover {
+  border-color: #a29bfe; /* Lighter purple */
+  box-shadow: 0 0 0 2px rgba(108, 92, 231, 0.1);
+}
+
+/* ===== Mobile Responsiveness (Under 600px) ===== */
+@media (max-width: 600px) {
+  /* Slightly smaller dropdown for mobile */
+  .goog-te-combo {
+    max-width: 150px; /* Prevents overflow */
+    font-size: 14px;  /* Readable but compact */
+    padding: 6px 10px;
+  }
+
+  /* Optional: Adjust the language list popup */
+  .goog-te-menu-frame {
+    max-width: 100% !important; /* Full-width on mobile */
+  }
+}
     /* Mobile responsive */
     @media (max-width: 767px) {
       #google-translate-container {
