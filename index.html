@@ -32,18 +32,6 @@ function googleTranslateElementInit() {
     layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL,
     autoDisplay: false // Prevents auto-popup
   }, 'google_translate_element');
-  // Force English to appear in dropdown (workaround)
-  setTimeout(function() {
-    var select = document.querySelector('.goog-te-combo');
-    if (select && !select.querySelector('option[value="en"]')) {
-      var option = document.createElement('option');
-      option.value = 'en';
-      option.text = 'English';
-      select.add(option);
-    }
-  }, 1000);
-
-  
   // Style the dropdown
   setTimeout(() => {
     const select = document.querySelector(".goog-te-combo");
