@@ -919,10 +919,14 @@ body {
   }
   
   .profile-pic {
-    margin: 0 auto 2rem !important;
-    max-width: 200px !important;
-    height:400px;
-    border-radius: 50% !important; /* Ensures circular image on mobile */
+    width: 140px !important;  /* Explicit equal dimensions */
+    height: 140px !important; 
+    min-width: 140px !important; /* Prevents shrinkage */
+    min-height: 140px !important;
+    margin: 0 auto 1.5rem !important;
+    border-radius: 50% !important;
+    object-fit: cover !important; /* Ensures no distortion */
+    aspect-ratio: 1/1 !important; /* Fallback for modern browsers */
   }
   
   .profile-info {
