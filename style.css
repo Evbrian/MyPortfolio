@@ -919,10 +919,10 @@ body {
   }
   
   .profile-pic {
-    width: 180px !important;  /* Explicit equal dimensions */
-    height: 170px !important; 
-    min-width: 180px !important; /* Prevents shrinkage */
-    min-height: 170px !important;
+    width: 250px !important;  /* Explicit equal dimensions */
+    height: 250px !important; 
+    min-width: 250px !important; /* Prevents shrinkage */
+    min-height: 250px !important;
     margin: 0 auto 1.5rem !important;
     border-radius: 50% !important;
     object-fit: cover !important; /* Ensures no distortion */
