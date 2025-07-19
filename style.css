@@ -303,22 +303,7 @@ body {
 .footer-social a:nth-child(5) { background-color: #0077b5; } /* LinkedIn */
 .footer-social a:nth-child(6) { background-color: #1da1f2; } /* Twitter */
 
-* Hide Google branding */
-    .goog-te-banner-frame, .goog-logo-link, 
-    .goog-te-gadget-icon { display: none !important; }
-    
-    /* Reset body positioning */
-    body { top: 0 !important; }
-    
-    /* Style the language dropdown */
-    .goog-te-combo {
-      padding: 8px 12px;
-      border-radius: 4px;
-      border: 1px solid #6c5ce7;
-      background: white;
-      color: #333;
-      font-family: 'DM Sans', sans-serif;
-    }
+
 /* Resume Button */
 .resume-btn {
     display: inline-flex;
@@ -650,7 +635,58 @@ body {
     background: var(--accent);
 }
 
+/* ===== Remove ALL Google Branding & Default Styling ===== */
+.goog-te-banner-frame, 
+.goog-logo-link, 
+.goog-te-gadget-icon,
+.goog-te-gadget, 
+.goog-te-combo, 
+.goog-te-menu-value span {
+  display: none !important;
+}
 
+/* Reset Google Translate's layout shift */
+body { 
+  top: 0 !important; 
+}
+
+/* ===== Custom Dropdown Styling ===== */
+.goog-te-combo {
+  /* Your custom design */
+  padding: 8px 12px;
+  border-radius: 4px;
+  border: 1px solid #6c5ce7;
+  background: white;
+  color: #333;
+  font-family: 'DM Sans', sans-serif;
+  cursor: pointer;
+  appearance: none; /* Removes default dropdown arrow on some browsers */
+  -webkit-appearance: none;
+  width: 100%; /* Responsive width */
+  max-width: 200px; /* Desktop max width */
+  transition: all 0.3s ease;
+}
+
+/* Hover effect */
+.goog-te-combo:hover {
+  border-color: #a29bfe;
+  box-shadow: 0 0 0 2px rgba(108, 92, 231, 0.1);
+}
+
+/* ===== Mobile Responsiveness ===== */
+@media (max-width: 600px) {
+  .goog-te-combo {
+    max-width: 150px; /* Slimmer on mobile */
+    font-size: 14px;
+    padding: 6px 10px;
+  }
+}
+
+/* Fix language list popup (optional) */
+.goog-te-menu-frame {
+  max-width: 100% !important;
+  width: 100% !important;
+}
 /* ===== Mobile-First Adjustments (max-width: 767px) ===== */
 @media (max-width: 767px) {
 body { 
