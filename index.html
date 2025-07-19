@@ -23,20 +23,32 @@
   </script>
 
   <!-- Google Translate -->
-  <script type="text/javascript">
-    function googleTranslateElementInit() {
-      new google.translate.TranslateElement({
-        pageLanguage: 'en',
-        includedLanguages: 'en,sw',
-        layout: google.translate.TranslateElement.InlineLayout.SIMPLE
-      }, 'google_translate_element');
-    }
-  </script>
-  <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" async defer></script>
+ <!-- Google Translate Script -->
+<script>
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({
+    pageLanguage: 'en',
+    includedLanguages: 'sw,fr,es,de,zh-CN,ar,hi', // Key languages
+    layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL,
+    autoDisplay: false // Prevents auto-popup
+  }, 'google_translate_element');
+  
+  // Style the dropdown
+  setTimeout(() => {
+    const select = document.querySelector(".goog-te-combo");
+    select.style.padding = "8px 12px";
+    select.style.borderRadius = "4px";
+    select.style.border = "1px solid #6c5ce7";
+  }, 500);
+}
+</script>
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" async></script>
 </head>
 <body>
   <!-- Google Translate Widget -->
-  <div id="google_translate_element"></div>
+   <div id="google-translate-container">
+    <div id="google_translate_element"></div>
+  </div>
 
   <div class="portfolio-container">
     <header class="header">
@@ -341,12 +353,7 @@
   <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn <i class="fab fa-linkedin-in"></i></a>
   <a href="https://twitter.com/yourhandle" target="_blank">Twitter <i class="fab fa-twitter"></i></a>
 </div>
-
-    <div class="language-switcher">
-      <button data-lang="en">EN</button>
-      <button data-lang="sw">SW</button>
-    </div>
-
+    
     <p>
       <i class="fas fa-envelope"></i> brianmwenda05@gmail.com
       <i class="fas fa-phone"></i> +254 717677103
@@ -491,34 +498,26 @@ window.addEventListener("DOMContentLoaded", () => {
       });
     });
 
-    // Language Switcher
-    document.querySelectorAll('.language-switcher button').forEach(btn => {
-      btn.addEventListener('click', () => {
-        const lang = btn.getAttribute('data-lang');
-        const select = document.querySelector('#google_translate_element select');
+ // Initialize Google Translate
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'en',
+        includedLanguages: 'sw,fr,es,de,zh-CN,ar,hi',
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+        autoDisplay: false
+      }, 'google_translate_element');
+      
+      // Optional: Style the dropdown after load
+      setTimeout(() => {
+        const select = document.querySelector(".goog-te-combo");
         if (select) {
-          select.value = lang;
-          select.dispatchEvent(new Event('change'));
+          select.style.margin = "10px 0";
         }
-      });
-    });
-
-
-  // Ensure Google Translate has enough z-index and height buffer
-  window.addEventListener('load', () => {
-    const interval = setInterval(() => {
-      const iframe = document.querySelector('.goog-te-menu-frame');
-      if (iframe) {
-        iframe.style.zIndex = '999999';
-        iframe.style.top = '60px';
-        iframe.style.position = 'absolute';
-        clearInterval(interval);
-      }
-    }, 300);
-  });
-
-
+      }, 1000);
+    }
   </script>
+  
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" async defer></script>
 
 <!-- Tawk.to Script with Manual Toggle -->
 <script type="text/javascript">
