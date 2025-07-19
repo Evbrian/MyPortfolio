@@ -693,17 +693,6 @@ body {
   .tagline {
     font-size: 0.7rem !important;
   }
-  /*picture section*/
- .profile-pic {
-    width: 120px !important;  /* Reduced from original */
-    height: 120px !important;
-    margin-bottom: 0.8rem !important; /* Tighter spacing */
-  }
-  
-  /* Optional: Adjust border thickness if you have one */
-  .profile-pic img {
-    border-width: 2px !important; /* Thinner border on mobile */
-  }
   /* About Section */
   .profile-info h2 {
     font-size: 1.5rem !important;
