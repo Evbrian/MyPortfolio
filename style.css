@@ -1,4 +1,4 @@
- /* Light theme (default) */
+/* Light theme (default) */
 :root {
   --primary: #6c5ce7;
   --dark: #ffffff;
@@ -694,16 +694,16 @@ body {
     font-size: 0.7rem !important;
   }
   /*picture section*/
- /*.profile-pic {
-    width: 140px !important;  /* Reduced from original */
-   /* height: 140px !important;
+ .profile-pic {
+    width: 120px !important;  /* Reduced from original */
+    height: 140px !important;
     margin-bottom: 1.3rem !important; /* Tighter spacing */
-/*  }
+  }
   
   /* Optional: Adjust border thickness if you have one */
-  /*.profile-pic img {
+  .profile-pic img {
     border-width: 2px !important; /* Thinner border on mobile */
- /* }
+  }
   /* About Section */
   .profile-info h2 {
     font-size: 1.5rem !important;
