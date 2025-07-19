@@ -498,26 +498,16 @@ window.addEventListener("DOMContentLoaded", () => {
       });
     });
 
- // Initialize Google Translate
-    function googleTranslateElementInit() {
-      new google.translate.TranslateElement({
-        pageLanguage: 'en',
-        includedLanguages: 'sw,fr,es,de,zh-CN,ar,hi',
-        layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-        autoDisplay: false
-      }, 'google_translate_element');
-      
-      // Optional: Style the dropdown after load
-      setTimeout(() => {
-        const select = document.querySelector(".goog-te-combo");
-        if (select) {
-          select.style.margin = "10px 0";
-        }
-      }, 1000);
-    }
-  </script>
-  
-<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" async defer></script>
+/* Add this just before the closing */
+<script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({ pageLanguage: 'en' }, 'google_translate_element');
+  }
+</script>
+
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+
 
 <!-- Tawk.to Script with Manual Toggle -->
 <script type="text/javascript">
