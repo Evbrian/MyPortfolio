@@ -695,8 +695,8 @@ body {
   }
   /*picture section*/
  .profile-pic {
-    width: 80px !important;  /* Reduced from original */
-    height: 300px !important;
+    width: 120px !important;  /* Reduced from original */
+    height: 30px !important;
     margin-bottom: 1.0rem !important; /* Tighter spacing */
   }
   
