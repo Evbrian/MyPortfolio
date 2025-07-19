@@ -677,7 +677,7 @@ body {
 @media (max-width: 600px) {
   .goog-te-combo {
     max-width: 150px; /* Slimmer on mobile */
-    font-size: 14px;
+    font-size: 12px;
     padding: 6px 10px;
   }
 }
