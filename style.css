@@ -716,6 +716,24 @@ body {
   }
 
   /* Project Descriptions */
+ .project-filters {
+  display: flex !important;
+  flex-wrap: nowrap !important; /* Force single line */
+  overflow-x: auto !important; /* Enable horizontal scroll if needed */
+  gap: 8px !important; /* Space between buttons */
+  padding-bottom: 4px !important; /* For scrollbar space */
+  -webkit-overflow-scrolling: touch !important; /* Smooth iOS scroll */
+}
+
+/* Hide scrollbar visually (optional) */
+.project-filters::-webkit-scrollbar {
+  display: none !important;
+}
+
+.filter-btn {
+  flex-shrink: 0 !important; /* Prevent button squishing */
+  white-space: nowrap !important; /* Keep button text in one line */
+}
   .project-card p {
     font-size: 0.7rem !important;
   }
@@ -728,6 +746,17 @@ body {
     gap: 30px;
   }
 
+.testimonial-form-toggle h2 {
+    font-size: 1.4rem !important; /* Reduced from 2rem */
+    margin-bottom: 1rem !important;
+  }
+  
+  #formToggleBtn {
+    font-size: 0.85rem !important; /* Reduced from 1.05rem */
+    padding: 0.7rem 1.5rem !important;
+    gap: 8px !important;
+  }
+ 
   /* Projects */
   .projects-grid {
     grid-template-columns: 1fr !important;
