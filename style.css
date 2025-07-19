@@ -921,6 +921,7 @@ body {
   .profile-pic {
     margin: 0 auto 2rem !important;
     max-width: 200px !important;
+    height:400px;
     border-radius: 50% !important; /* Ensures circular image on mobile */
   }
   
