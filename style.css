@@ -884,63 +884,32 @@ body {
   }
 
   /* Social Media Links in Footer */
-     /* Base footer styling */
-    .footer {
-      padding: 10px 0;
-      font-size: 12px;
-    }
-
-    .footer-content {
-      max-width: 100%;
-      overflow: hidden;
-      position: relative;
-    }
-
-    .footer-social {
-      display: flex;
-      flex-wrap: nowrap;
-      gap: 10px;
-      padding: 5px 10px;
-
-      
+    
+ .footer-social {
+  display: flex;
+  flex-wrap: nowrap;
   overflow-x: auto;
+  gap: 12px;
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
-    }
+}
 
-    .footer-social a {
-     
-      text-decoration: none;
-      padding: 6px 12px;
-     
-      border-radius: 4px;
-      flex: 0 0 auto;
-      white-space: nowrap;
-
-      flex: 0 0 auto;
+.footer-social a {
+  flex: 0 0 auto;
+  white-space: nowrap;
+  padding: 8px 16px;
+  border-radius: 6px;
+  text-decoration: none;
   font-size: 12px;
   display: flex;
   align-items: center;
-  gap: 4px;
-    }
-
-    .footer-social a:hover {
-      background-color: #444;
-    }
-  
+  gap: 6px;
+}
 
 /* Optional: Hide scroll bar for Webkit browsers */
 .footer-social::-webkit-scrollbar {
   display: none;
 }
-
-    /* Disable animation on large screens */
-    @media screen and (min-width: 768px) {
-      .footer-social a {
-        animation: none !important;
-        transform: none !important;
-      }
-    }
   
  h2 {
   font-size: 1.5rem !important;  /* ~24px at 16px base */
