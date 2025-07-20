@@ -424,38 +424,16 @@ function googleTranslateElementInit() {
 
   autoSwipeTestimonials();
 
-    document.addEventListener('DOMContentLoaded', function () {
-      const socialContainer = document.querySelector('.footer-social');
+const container = document.querySelector('.footer-social');
+  let scrollAmount = 0;
+  setInterval(() => {
+    scrollAmount += 1;
+    if (scrollAmount >= container.scrollWidth - container.clientWidth) {
+      scrollAmount = 0;
+    }
+    container.scrollLeft = scrollAmount;
+  }, 30); // Adjust speed here (smaller = faster)
 
-      if (window.innerWidth <= 767 && socialContainer) {
-        const socialLinks = socialContainer.querySelectorAll('a');
-        const containerWidth = socialContainer.offsetWidth;
-        let linksWidth = 0;
-
-        // Calculate total width of all links
-        socialLinks.forEach(link => {
-          linksWidth += link.offsetWidth + 10; // 10px for gap
-        });
-
-        // Only animate if content overflows
-        if (linksWidth > containerWidth) {
-          socialContainer.style.position = 'relative';
-
-          // Create animation style
-          const style = document.createElement('style');
-          style.textContent = `
-            @keyframes autoScroll {
-              0% { transform: translateX(0); }
-              100% { transform: translateX(calc(${containerWidth}px - ${linksWidth}px)); }
-            }
-            .footer-social {
-              animation: autoScroll ${linksWidth / 30}s linear infinite alternate;
-            }
-          `;
-          document.head.appendChild(style);
-        }
-      }
-    });
     
 // Theme Toggle
 const toggleBtn = document.getElementById("theme-toggle");
