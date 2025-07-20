@@ -37,6 +37,7 @@ body {
     margin: 0 auto;
     padding: 0 2rem;
 }
+
 /* Header */
 .header {
     text-align: center;
@@ -301,7 +302,6 @@ body {
 .footer-social a:nth-child(4) { background-color: #333; } /* GitHub */
 .footer-social a:nth-child(5) { background-color: #0077b5; } /* LinkedIn */
 .footer-social a:nth-child(6) { background-color: #1da1f2; } /* Twitter */
-
 
 /* Resume Button */
 .resume-btn {
@@ -634,38 +634,6 @@ body {
     background: var(--accent);
 }
 
-/* ===== Remove ALL Google Branding & Default Styling ===== */
-/*hide google branding*/
-/*.goog-te-banner-frame,
-.goog-logo-link,
-.goog-te-gadget-icon{
-  display: none !important;
-}
-.goog-te-banner-frame.skiptranslate {
-  display: none !important;
-}
-
-body {
-  top: 0px !important;
-  position: relative !important;
-  overflow-x: hidden !important;
-}
-
-html {
-  overflow-x: hidden !important;
-}
-
-.goog-te-gadget {
-  font-size: 8px; /* hides "Powered by Google" text */
-/*}#goog-gt-tt, .goog-te-balloon-frame {
-  display: none !important;
-}
-
-.goog-text-highlight {
-  background: none !important;
-  box-shadow: none !important;
-}
-/*new*/
 /*.goog-te-banner-frame, 
 .goog-logo-link, 
 .goog-te-gadget-icon,
