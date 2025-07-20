@@ -903,9 +903,9 @@ body {
 }
 
 /* ===== Desktop (min-width: 1024px) ===== */
-@media (min-width: 1024px) {
+/*@media (min-width: 1024px) {
   /* Project Carousel */
-  .projects-carousel-wrapper {
+/*  .projects-carousel-wrapper {
     position: relative;
   }
   
@@ -925,7 +925,7 @@ body {
   }
 
   /* Testimonial Controls */
-  .carousel-controls {
+  /*.carousel-controls {
     position: absolute;
     top: 50%;
     width: 100%;
@@ -935,15 +935,15 @@ body {
 }
 
 /* ===== Large Desktop (min-width: 1200px) ===== */
-@media (min-width: 1200px) {
+/**@media (min-width: 1200px) {
   /* Project Grid */
-  .projects-grid {
+ /* .projects-grid {
     grid-template-columns: repeat(3, 1fr) !important;
   }
 }
 
 /* ===== Ultra-Wide Screens (min-width: 1600px) ===== */
-@media (min-width: 1600px) {
+/*@media (min-width: 1600px) {
   .portfolio-container {
     max-width: 1500px;
     margin: 0 auto;
@@ -951,7 +951,7 @@ body {
 }
 
 /* ===== Print Styles ===== */
-@media print {
+/*@media print {
   .chat-toggle,
   .project-nav,
   .theme-btn,
