@@ -832,16 +832,48 @@ body {
   }
 
   /* Experience Timeline */
-  .timeline-item {
-    flex-direction: column;
-  }
-  
-  .timeline-date {
-    width: 100%;
-    margin-bottom: 10px;
-    text-align: left;
+  experience-section {
+    padding: 20px;
   }
 
+  .timeline {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .timeline-item {
+    display: block;
+    margin-bottom: 30px;
+  }
+
+  .timeline-date {
+    font-weight: bold;
+    color: #666;
+    margin-bottom: 10px;
+  }
+
+  .timeline-content {
+    padding: 10px 15px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    font-size: 14px;
+  }
+
+  .timeline-content h3 {
+    font-size: 16px;
+    margin-top: 0;
+  }
+
+  .timeline-content ul {
+    padding-left: 20px;
+    margin: 10px 0;
+  }
+
+  .timeline-content li {
+    margin-bottom: 8px;
+    line-height: 1.4;
+  }
  /* CV Buttons in Hero */
   .hero .resume-btn {
     display: inline-block !important; /* Prevents full-width */
