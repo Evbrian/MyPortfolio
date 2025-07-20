@@ -460,28 +460,29 @@ function googleTranslateElementInit() {
 });
     
     // Theme Toggle
-    // Theme Toggle (Fixed)
 document.getElementById("theme-toggle").addEventListener("click", function () {
-  document.body.classList.toggle("dark-mode"); // ✅ This matches your CSS
+  const isDark = document.body.classList.toggle("dark-mode"); // returns true if added
   const icon = this.querySelector("i");
-  icon.classList.toggle("fa-sun");
-  icon.classList.toggle("fa-moon");
+  icon.classList.toggle("fa-sun", isDark);
+  icon.classList.toggle("fa-moon", !isDark);
 
-  // Store preference
-  const theme = document.body.classList.contains("dark-mode") ? "light" : "dark";
-  localStorage.setItem("theme", theme);
+  // Store correct preference
+  localStorage.setItem("theme", isDark ? "dark" : "light");
 });
 
 // Load stored theme on page load
 window.addEventListener("DOMContentLoaded", () => {
   const storedTheme = localStorage.getItem("theme");
-  if (storedTheme === "light") {
+  const prefersDark = storedTheme === "dark";
+
+  if (prefersDark) {
     document.body.classList.add("dark-mode");
     const icon = document.getElementById("theme-toggle").querySelector("i");
     icon.classList.remove("fa-moon");
     icon.classList.add("fa-sun");
   }
 });
+
 
     // Skill Bars
     document.addEventListener("DOMContentLoaded", () => {
