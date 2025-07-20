@@ -1,3 +1,4 @@
+/* Light theme (default) */
 :root {
   --primary: #6c5ce7;
   --dark: #ffffff;
@@ -7,31 +8,28 @@
   --accent: #e84393;
 }
 
+
 /* Dark theme overrides */
 body.dark-mode {
-  --primary: #2c3e50;
-  --dark: #1e1e1e;
-  --darker: #121212;
-  --light: #f5f5f5;
-  --lighter: #ffffff;
-  --accent: #ff6b81;
+ background-color: var(--dark);
+    color: var(--light);
 }
-
-body {
-  background-color: var(--dark);
-  color: var(--light);
-  transition: background-color 0.3s, color 0.3s;
-}
-
 
 /* Base Styles */
 * {
-    margin: 20;
-    margin-right:0px;
-    margin-bottom:0px;
-    padding: 20;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #ffffff; /* white background */
+    color: #000000; /* black text */
+    line-height: 1.6;
+    min-height: 100vh;
+    position: relative; /* For translate dropdown positioning */
+ transition: background-color 0.4s ease, color 0.4s ease;
 }
 
 .portfolio-container {
