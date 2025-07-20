@@ -37,7 +37,25 @@ body {
     margin: 0 auto;
     padding: 0 2rem;
 }
-
+/*hide google branding*/
+.goog-te-banner-frame,
+.goog-logo-link,
+.goog-te-gadget-icon{
+  display: none !important;
+}
+/*reset body positioning*/
+body{
+  top: 0 !important;
+}
+/*style the languange drop down*/
+goog-te-combo{
+  padding: 8px 12px;
+  border-radius: 4px;
+  border: 1px solid #6c5ce7;
+  background:white;
+  color: #333;
+  font-family:'DM Sans',sans-serif
+}
 /* Header */
 .header {
     text-align: center;
