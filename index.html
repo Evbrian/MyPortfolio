@@ -49,7 +49,8 @@ function googleTranslateElementInit() {
   <div class="portfolio-container">
     <header class="header">
       <button id="theme-toggle" class="theme-btn">
-         <i class="fas fa-moon"></i> 
+  <i class="fas fa-moon"></i>
+</button>
       </button>
       <div class="hero">
   <h1>Njeru Brian Mwenda</h1>
@@ -460,38 +461,34 @@ function googleTranslateElementInit() {
 });
     
 // Theme Toggle
-document.getElementById("theme-toggle").addEventListener("click", function () {
-  const isDark = document.body.classList.toggle("dark-mode"); // toggle dark mode
-  const icon = this.querySelector("i");
+const toggleBtn = document.getElementById("theme-toggle");
+  const icon = toggleBtn.querySelector("i");
 
-  // Update icon
-  if (isDark) {
-    icon.classList.remove("fa-moon");
-    icon.classList.add("fa-sun");
-    localStorage.setItem("theme", "dark");
-  } else {
-    icon.classList.remove("fa-sun");
-    icon.classList.add("fa-moon");
-    localStorage.setItem("theme", "light");
-  }
-});
+  // Load saved theme
+  window.addEventListener("DOMContentLoaded", () => {
+    const theme = localStorage.getItem("theme");
+    if (theme === "dark") {
+      document.body.classList.add("dark-mode");
+      icon.classList.remove("fa-moon");
+      icon.classList.add("fa-sun");
+    }
+  });
 
-// Load stored theme (default is light)
-window.addEventListener("DOMContentLoaded", () => {
-  const storedTheme = localStorage.getItem("theme");
-  const icon = document.getElementById("theme-toggle").querySelector("i");
+  // Toggle theme
+  toggleBtn.addEventListener("click", () => {
+    document.body.classList.toggle("dark-mode");
+    const isDark = document.body.classList.contains("dark-mode");
 
-  if (storedTheme === "dark") {
-    document.body.classList.add("dark-mode");
-    icon.classList.remove("fa-moon");
-    icon.classList.add("fa-sun");
-  } else {
-    document.body.classList.remove("dark-mode");
-    icon.classList.remove("fa-sun");
-    icon.classList.add("fa-moon");
-  }
-});
-
+    if (isDark) {
+      icon.classList.remove("fa-moon");
+      icon.classList.add("fa-sun");
+      localStorage.setItem("theme", "dark");
+    } else {
+      icon.classList.remove("fa-sun");
+      icon.classList.add("fa-moon");
+      localStorage.setItem("theme", "light");
+    }
+  });
 
     // Skill Bars
     document.addEventListener("DOMContentLoaded", () => {
