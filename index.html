@@ -49,7 +49,7 @@ function googleTranslateElementInit() {
   <div class="portfolio-container">
     <header class="header">
       <button id="theme-toggle" class="theme-btn">
-        <i class="fas fa-moon"></i>
+         <i class="fas fa-moon"></i> 
       </button>
       <div class="hero">
   <h1>Njeru Brian Mwenda</h1>
@@ -459,27 +459,36 @@ function googleTranslateElementInit() {
   }
 });
     
-    // Theme Toggle
+// Theme Toggle
 document.getElementById("theme-toggle").addEventListener("click", function () {
-  const isDark = document.body.classList.toggle("dark-mode"); // returns true if added
+  const isDark = document.body.classList.toggle("dark-mode"); // toggle dark mode
   const icon = this.querySelector("i");
-  icon.classList.toggle("fa-sun", isDark);
-  icon.classList.toggle("fa-moon", !isDark);
 
-  // Store correct preference
-  localStorage.setItem("theme", isDark ? "dark" : "light");
-});
-
-// Load stored theme on page load
-window.addEventListener("DOMContentLoaded", () => {
-  const storedTheme = localStorage.getItem("theme");
-  const prefersDark = storedTheme === "dark";
-
-  if (prefersDark) {
-    document.body.classList.add("dark-mode");
-    const icon = document.getElementById("theme-toggle").querySelector("i");
+  // Update icon
+  if (isDark) {
     icon.classList.remove("fa-moon");
     icon.classList.add("fa-sun");
+    localStorage.setItem("theme", "dark");
+  } else {
+    icon.classList.remove("fa-sun");
+    icon.classList.add("fa-moon");
+    localStorage.setItem("theme", "light");
+  }
+});
+
+// Load stored theme (default is light)
+window.addEventListener("DOMContentLoaded", () => {
+  const storedTheme = localStorage.getItem("theme");
+  const icon = document.getElementById("theme-toggle").querySelector("i");
+
+  if (storedTheme === "dark") {
+    document.body.classList.add("dark-mode");
+    icon.classList.remove("fa-moon");
+    icon.classList.add("fa-sun");
+  } else {
+    document.body.classList.remove("dark-mode");
+    icon.classList.remove("fa-sun");
+    icon.classList.add("fa-moon");
   }
 });
 
