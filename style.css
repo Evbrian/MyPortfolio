@@ -27,6 +27,8 @@ body {
 /* Base Styles */
 * {
     margin: 20;
+    margin-right:0px;
+    margin-bottom:0px;
     padding: 20;
     box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
