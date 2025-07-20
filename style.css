@@ -37,25 +37,6 @@ body {
     margin: 0 auto;
     padding: 0 2rem;
 }
-/*hide google branding*/
-.goog-te-banner-frame,
-.goog-logo-link,
-.goog-te-gadget-icon{
-  display: none !important;
-}
-/*reset body positioning*/
-/*body{
-  top: 0 !important;
-}
-/*style the languange drop down*/
-/*goog-te-combo{
-  padding: 8px 12px;
-  border-radius: 4px;
-  border: 1px solid #6c5ce7;
-  background:white;
-  color: #333;
-  font-family:'DM Sans',sans-serif
-}
 /* Header */
 .header {
     text-align: center;
@@ -654,6 +635,37 @@ body {
 }
 
 /* ===== Remove ALL Google Branding & Default Styling ===== */
+/*hide google branding*/
+.goog-te-banner-frame,
+.goog-logo-link,
+.goog-te-gadget-icon{
+  display: none !important;
+}
+.goog-te-banner-frame.skiptranslate {
+  display: none !important;
+}
+
+body {
+  top: 0px !important;
+  position: relative !important;
+  overflow-x: hidden !important;
+}
+
+html {
+  overflow-x: hidden !important;
+}
+
+.goog-te-gadget {
+  font-size: 8px; /* hides "Powered by Google" text */
+}#goog-gt-tt, .goog-te-balloon-frame {
+  display: none !important;
+}
+
+.goog-text-highlight {
+  background: none !important;
+  box-shadow: none !important;
+}
+
 /*.goog-te-banner-frame, 
 .goog-logo-link, 
 .goog-te-gadget-icon,
