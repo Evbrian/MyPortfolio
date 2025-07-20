@@ -636,7 +636,7 @@ body {
 
 /* ===== Remove ALL Google Branding & Default Styling ===== */
 /*hide google branding*/
-.goog-te-banner-frame,
+/*.goog-te-banner-frame,
 .goog-logo-link,
 .goog-te-gadget-icon{
   display: none !important;
@@ -657,7 +657,7 @@ html {
 
 .goog-te-gadget {
   font-size: 8px; /* hides "Powered by Google" text */
-}#goog-gt-tt, .goog-te-balloon-frame {
+/*}#goog-gt-tt, .goog-te-balloon-frame {
   display: none !important;
 }
 
@@ -665,7 +665,7 @@ html {
   background: none !important;
   box-shadow: none !important;
 }
-
+/*new*/
 /*.goog-te-banner-frame, 
 .goog-logo-link, 
 .goog-te-gadget-icon,
