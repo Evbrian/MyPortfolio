@@ -24,6 +24,12 @@ body.dark-mode {
     position: relative; /* Added for translate dropdown positioning */
 }
 
+/* Elements inside dark mode */
+body.dark-mode .testimonial {
+  background-color: var(--dark); /* dark background */
+  color: var(--light); /* light text */
+}
+
 /* Base Styles */
 * {
     margin: 0;
