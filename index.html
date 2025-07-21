@@ -388,42 +388,60 @@ function googleTranslateElementInit() {
     });
   });
 /*Testmonials*/
-  const testimonials = document.querySelectorAll('.testimonial');
-  const prevBtn = document.querySelector('.prev-btn');
-  const nextBtn = document.querySelector('.next-btn');
-  let currentIndex = 0;
+ // Replace your existing testimonial code with this:
 
-  function showTestimonial(index) {
-    testimonials.forEach((testimonial, i) => {
-      testimonial.classList.toggle('active', i === index);
-    });
-  }
+let autoSwipeInterval;
+const testimonials = document.querySelectorAll('.testimonial');
+const prevBtn = document.querySelector('.prev-btn');
+const nextBtn = document.querySelector('.next-btn');
+const carousel = document.querySelector('.testimonial-carousel');
+let currentIndex = 0;
 
-  prevBtn.addEventListener('click', () => {
-    currentIndex = (currentIndex - 1 + testimonials.length) % testimonials.length;
-    showTestimonial(currentIndex);
+function showTestimonial(index) {
+  testimonials.forEach((testimonial, i) => {
+    testimonial.classList.toggle('active', i === index);
   });
+}
 
-  nextBtn.addEventListener('click', () => {
-    currentIndex = (currentIndex + 1) % testimonials.length;
-    showTestimonial(currentIndex);
-  });
-
-  // Initialize
+function nextTestimonial() {
+  currentIndex = (currentIndex + 1) % testimonials.length;
   showTestimonial(currentIndex);
+}
 
-  // Auto swipe every 4 seconds
-  let autoSwipeInterval;
+function prevTestimonial() {
+  currentIndex = (currentIndex - 1 + testimonials.length) % testimonials.length;
+  showTestimonial(currentIndex);
+}
 
-  function autoSwipeTestimonials() {
-    autoSwipeInterval = setInterval(() => {
-      currentIndex = (currentIndex + 1) % testimonials.length;
-      showTestimonial(currentIndex);
-    }, 2000);
-  }
+function startAutoSwipe() {
+  autoSwipeInterval = setInterval(nextTestimonial, 4000);
+}
 
-  autoSwipeTestimonials();
+function stopAutoSwipe() {
+  clearInterval(autoSwipeInterval);
+}
 
+// Initialize
+showTestimonial(currentIndex);
+startAutoSwipe();
+
+// Event Listeners
+prevBtn.addEventListener('click', () => {
+  stopAutoSwipe();
+  prevTestimonial();
+  startAutoSwipe();
+});
+
+nextBtn.addEventListener('click', () => {
+  stopAutoSwipe();
+  nextTestimonial();
+  startAutoSwipe();
+});
+
+// Pause on hover
+carousel.addEventListener('mouseenter', stopAutoSwipe);
+carousel.addEventListener('mouseleave', startAutoSwipe);
+    
 const container = document.querySelector('.footer-social');
   let scrollAmount = 0;
   setInterval(() => {
