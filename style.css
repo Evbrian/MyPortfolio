@@ -666,8 +666,7 @@ body {
 @media (max-width: 767px) {
 body { 
  font-size: 12px; 
-    margin: 0 !important;
-    padding: 0 !important;
+    margin: -20px !important;
 } 
   /*font sizes*/
   /* Header */
