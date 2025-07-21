@@ -45,11 +45,10 @@ function googleTranslateElementInit() {
   <!-- Google Translate Widget -->
     <div id="google_translate_element"></div
 
-  <div class="portfolio-container">
+   <div class="portfolio-container">
     <header class="header">
       <button id="theme-toggle" class="theme-btn">
-  <i class="fas fa-moon"></i>
-</button>
+        <i class="fas fa-moon"></i>
       </button>
       <div class="hero">
   <h1>Njeru Brian Mwenda</h1>
@@ -75,7 +74,7 @@ function googleTranslateElementInit() {
     <main class="main-content">            <!-- About Section -->
             <section id="about" class="profile-section">
                 <div class="profile-pic">
-                    <img src="IMG_7192 (Edited).JPG" alt="Njeru Brian Mwenda">
+                    <img src="WhatsApp Image 2025-07-04 at 09.40.42.jpeg" alt="Njeru Brian Mwenda">
                 </div>
                 <div class="profile-info">
                     <h2>About Me</h2>
@@ -305,6 +304,7 @@ function googleTranslateElementInit() {
                 <h2>Professional Experience</h2>
                 <div class="timeline">
                     <div class="timeline-item">
+                        <div class="timeline-date">2023 - Present</div>
                         <div class="timeline-content">
                             <h3>ICT Intern - Murang'a University</h3>
                             <ul>
@@ -315,6 +315,7 @@ function googleTranslateElementInit() {
                         </div>
                     </div>
                     <div class="timeline-item">
+                        <div class="timeline-date">2022</div>
                         <div class="timeline-content">
                             <h3>Freelance Web Developer</h3>
                             <ul>
@@ -340,14 +341,15 @@ function googleTranslateElementInit() {
   <footer class="footer">
   <div class="footer-content">
     <div class="footer-social">
-  <a href="https://wa.me/254717677103" target="_blank">WhatsApp <i class="fab fa-whatsapp"></i></a>
-  <a href="https://m.me/100086645200721" target="_blank">Facebook <i class="fab fa-facebook-f"></i></a>
-  <a href="https://instagram.com/yourprofile" target="_blank">Instagram <i class="fab fa-instagram"></i></a>
-  <a href="https://github.com/Evbrian" target="_blank">Github <i class="fab fa-github"></i></a>
-  <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn <i class="fab fa-linkedin-in"></i></a>
-  <a href="https://twitter.com/yourhandle" target="_blank">Twitter <i class="fab fa-twitter"></i></a>
-</div>
-    
+      <a href="https://wa.me/254717677103" target="_blank">WhatsApp <i class="fab fa-whatsapp"></i></a>
+      <a href="https://m.me/100086645200721" target="_blank">Facebook <i class="fab fa-facebook-f"></i></a>
+      <a href="https://instagram.com/yourprofile" target="_blank">Instagram <i class="fab fa-instagram"></i></a>
+      <a href="https://github.com/Evbrian" target="_blank">GitHub <i class="fab fa-github"></i></a>
+      <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn <i class="fab fa-linkedin-in"></i></a>
+      <a href="https://twitter.com/yourhandle" target="_blank">Twitter <i class="fab fa-twitter"></i></a>
+    </div>
+  </div>
+  
     <p>
       <i class="fas fa-envelope"></i> brianmwenda05@gmail.com
       <i class="fas fa-phone"></i> +254 717677103
@@ -355,7 +357,6 @@ function googleTranslateElementInit() {
     </p>
     
     <p>&copy; <span id="year"></span> Njeru Brian Mwenda. All rights reserved.</p>
-  </div>
 </footer>
   </div>
 
@@ -434,36 +435,28 @@ const container = document.querySelector('.footer-social');
     container.scrollLeft = scrollAmount;
   }, 30); // Adjust speed here (smaller = faster)
 
-    
-// Theme Toggle
-const toggleBtn = document.getElementById("theme-toggle");
-  const icon = toggleBtn.querySelector("i");
+    // Theme Toggle
+document.getElementById("theme-toggle").addEventListener("click", function () {
+  document.body.classList.toggle("dark-mode"); // ✅ This matches your CSS
+  const icon = this.querySelector("i");
+  icon.classList.toggle("fa-sun");
+  icon.classList.toggle("fa-moon");
 
-  // Load saved theme
-  window.addEventListener("DOMContentLoaded", () => {
-    const theme = localStorage.getItem("theme");
-    if (theme === "dark") {
-      document.body.classList.add("dark-mode");
-      icon.classList.remove("fa-moon");
-      icon.classList.add("fa-sun");
-    }
-  });
+  // Store preference
+  const theme = document.body.classList.contains("dark-mode") ? "light" : "dark";
+  localStorage.setItem("theme", theme);
+});
 
-  // Toggle theme
-  toggleBtn.addEventListener("click", () => {
-    document.body.classList.toggle("dark-mode");
-    const isDark = document.body.classList.contains("dark-mode");
-
-    if (isDark) {
-      icon.classList.remove("fa-moon");
-      icon.classList.add("fa-sun");
-      localStorage.setItem("theme", "dark");
-    } else {
-      icon.classList.remove("fa-sun");
-      icon.classList.add("fa-moon");
-      localStorage.setItem("theme", "light");
-    }
-  });
+// Load stored theme on page load
+window.addEventListener("DOMContentLoaded", () => {
+  const storedTheme = localStorage.getItem("theme");
+  if (storedTheme === "light") {
+    document.body.classList.add("dark-mode");
+    const icon = document.getElementById("theme-toggle").querySelector("i");
+    icon.classList.remove("fa-moon");
+    icon.classList.add("fa-sun");
+  }
+});
 
     // Skill Bars
     document.addEventListener("DOMContentLoaded", () => {
@@ -476,7 +469,9 @@ const toggleBtn = document.getElementById("theme-toggle");
       });
     });
 
-/* Add this just before the closing */
+  </script>
+  
+<!-- Add this just before the closing -->
 <script type="text/javascript">
   function googleTranslateElementInit() {
     new google.translate.TranslateElement({ pageLanguage: 'en' }, 'google_translate_element');
