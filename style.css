@@ -826,7 +826,7 @@ body {
 
   /* Social Media Links in Footer */
     .footer{
-    margin: 0px;
+    margin: -20px;
     }
  .footer-social {
   display: flex;
