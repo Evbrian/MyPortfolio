@@ -439,7 +439,17 @@ const container = document.querySelector('.footer-social');
     }
     container.scrollLeft = scrollAmount;
   }, 30); // Adjust speed here (smaller = faster)
+/*hide google frane*/
+    setInterval(function () {
+    var iframe = document.querySelector("iframe.goog-te-banner-frame");
+    if (iframe) {
+      iframe.style.display = "none";
+      document.body.style.top = "0px";
+    }
 
+    var frame = document.querySelector(".goog-te-banner-frame");
+    if (frame) frame.style.display = "none";
+  }, 1000);
     // Theme Toggle
 document.getElementById("theme-toggle").addEventListener("click", function () {
   document.body.classList.toggle("dark-mode"); // ✅ This matches your CSS
