@@ -825,7 +825,9 @@ body {
   }
 
   /* Social Media Links in Footer */
-    
+    .footer{
+    margin:-100px;
+    }
  .footer-social {
   display: flex;
   flex-wrap: nowrap;
