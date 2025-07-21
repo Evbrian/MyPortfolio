@@ -11,8 +11,15 @@
 
 /* Dark theme overrides */
 body.dark-mode {
- background-color: var(--dark);
-    color: var(--light);
+  --primary: #2c3e50;
+  --dark: #1e1e1e;
+  --darker: #121212;
+  --light: #eeeeee;
+  --lighter: #ffffff;
+  --accent: #e84393;
+
+  background-color: var(--dark);
+  color: var(--light);
 }
 
 /* Base Styles */
