@@ -649,6 +649,13 @@ body {
     background: var(--accent);
 }
 /* Google translate*/
+/* Center container */
+    .translate-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
  .goog-te-combo {
       padding: 8px 12px;
       border-radius: 4px;
@@ -667,14 +674,7 @@ body {
     iframe[style*="z-index: 999999"] {
       display: none !important;
     }
-@media (max-width: 767px) {
-  .goog-te-combo {
-    width: 30px;
-    height:10px;
-    font-size: 14px; 
-    padding: 8px 16px;
-  border-radius: 6px;
-  }
+
 /* ===== Mobile-First Adjustments (max-width: 767px) ===== */
 @media (max-width: 767px) {
 body { 
