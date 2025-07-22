@@ -669,10 +669,11 @@ body {
     }
 @media (max-width: 767px) {
   .goog-te-combo {
-    width: 30%;
-    font-size: 14px;
-    padding: 6px 10px;
-    border-radius: 2px;
+    width: 30px;
+    height:10px;
+    font-size: 14px; 
+    padding: 8px 16px;
+  border-radius: 6px;
   }
 /* ===== Mobile-First Adjustments (max-width: 767px) ===== */
 @media (max-width: 767px) {
