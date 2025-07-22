@@ -654,7 +654,6 @@ body {
       display: flex;
       justify-content: center;
       align-items: center;
-      flex-direction: column;
     }
  .goog-te-combo {
       padding: 8px 12px;
@@ -680,6 +679,20 @@ body {
 body { 
  font-size: 12px; 
 } 
+  /*.translate-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+ .goog-te-combo {
+      padding: 8px 12px;
+      border-radius: 4px;
+      border: 1px solid #6c5ce7;
+      margin: 10px auto;
+      display: block;
+      font-family: Arial, sans-serif;
+    }
+*/
   /*font sizes*/
   /* Header */
   .hero h1 {
