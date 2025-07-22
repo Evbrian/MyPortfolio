@@ -650,7 +650,7 @@ body {
 }
 /* Google translate*/
 /* Center container */
-    .translate-wrapper {
+   /* .translate-wrapper {
       display: flex;
       justify-content: center;
       align-items: center;
@@ -665,14 +665,64 @@ body {
     }
 
     /* ✅ Hide top banner injected via iframe */
-    .goog-te-banner-frame.skiptranslate {
+  /*  .goog-te-banner-frame.skiptranslate {
       display: none !important;
     }
 
     /* Hide iframe that shows the "Translated to..." popup */
-    iframe[style*="z-index: 999999"] {
+ /*   iframe[style*="z-index: 999999"] {
       display: none !important;
-    }
+    }*/
+
+.translate-wrapper {
+  display: flex;
+  justify-content: center; /* center horizontally */
+  align-items: center;     /* center vertically */
+  gap: 8px;                /* spacing between dropdown and "Powered by Google" */
+  margin-top: 20px;
+  flex-wrap: wrap;         /* responsive wrapping on small screens */
+}
+
+.goog-te-combo {
+  padding: 8px 12px;
+  border-radius: 4px;
+  border: 1px solid #6c5ce7;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+}
+
+/* Ensure "Powered by Google" appears on same line */
+.goog-logo-link {
+  display: inline-block !important;
+  font-size: 12px !important;
+  text-decoration: none !important;
+  color: #888 !important;
+  font-family: Arial, sans-serif !important;
+}
+
+/* ✅ Hide top banner */
+.goog-te-banner-frame.skiptranslate {
+  display: none !important;
+}
+
+/* ✅ Hide bottom right popup after translating */
+iframe[style*="z-index: 999999"] {
+  display: none !important;
+}
+
+/* ✅ Remove body top margin caused by banner */
+body {
+  top: 0 !important;
+}
+
+/* ✅ Optional: Responsive styling for mobile */
+@media (max-width: 600px) {
+  .translate-wrapper {
+    flex-direction: column;
+    gap: 6px;
+  }
+}
+
 
 /* ===== Mobile-First Adjustments (max-width: 767px) ===== */
 @media (max-width: 767px) {
