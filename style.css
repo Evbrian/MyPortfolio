@@ -669,18 +669,11 @@ body {
     }
 @media (max-width: 767px) {
   .goog-te-combo {
-    width: 90%;
-    font-size: 16px;
-    padding: 12px 16px;
-    border-radius: 12px;
+    width: 30%;
+    font-size: 14px;
+    padding: 6px 10px;
+    border-radius: 2px;
   }
-
-  .translate-wrapper {
-    padding: 10px;
-    text-align: center;
-  }
-}
-
 /* ===== Mobile-First Adjustments (max-width: 767px) ===== */
 @media (max-width: 767px) {
 body { 
