@@ -466,7 +466,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
   </script>
   
-<!-- Add this just before the closing -->
+<!-- Google Translater -->
 <script type="text/javascript">
     function googleTranslateElementInit() {
       new google.translate.TranslateElement({
@@ -476,6 +476,15 @@ window.addEventListener("DOMContentLoaded", () => {
         autoDisplay: false
       }, 'google_translate_element');
     }
+
+    // Remove banner if it appears
+    const removePopup = setInterval(() => {
+      const iframe = document.querySelector('iframe[style*="z-index: 999999"]');
+      if (iframe) {
+        iframe.remove();
+        clearInterval(removePopup);
+      }
+    }, 300);
   </script>
 
   <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
