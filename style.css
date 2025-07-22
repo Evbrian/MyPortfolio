@@ -652,7 +652,10 @@ body {
 .goog-te-balloon-frame {
   display: none !important;
 }
-
+/* ✅ Hide translation popup bar */
+    .goog-te-banner-frame.skiptranslate {
+      display: none !important;
+    }
 #google_translate_element {
       text-align: center;
       margin-top: 20px;
@@ -667,7 +670,6 @@ body {
 
     /* Optional: Hide Google Toolbar */
     .goog-te-banner-frame.skiptranslate,
-    .goog-logo-link,
     .goog-te-gadget span {
       display: none !important;
     }
