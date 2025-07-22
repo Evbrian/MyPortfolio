@@ -467,7 +467,7 @@ window.addEventListener("DOMContentLoaded", () => {
   </script>
   
 <!-- Google Translater -->
-<script type="text/javascript">
+ <script type="text/javascript">
     function googleTranslateElementInit() {
       new google.translate.TranslateElement({
         pageLanguage: 'en',
@@ -477,17 +477,23 @@ window.addEventListener("DOMContentLoaded", () => {
       }, 'google_translate_element');
     }
 
-    // Remove banner if it appears
-    const removePopup = setInterval(() => {
-      const iframe = document.querySelector('iframe[style*="z-index: 999999"]');
-      if (iframe) {
-        iframe.remove();
-        clearInterval(removePopup);
-      }
-    }, 300);
+    // 🔁 Keep removing the translation banner iframe if it gets added
+    const removeGooglePopup = () => {
+      const bannerFrame = document.querySelector('iframe[style*="z-index: 999999"]');
+      if (bannerFrame) bannerFrame.remove();
+    };
+
+    // Repeatedly try to remove iframe every 500ms for the first 10s
+    let attempts = 0;
+    const intervalId = setInterval(() => {
+      removeGooglePopup();
+      attempts++;
+      if (attempts > 20) clearInterval(intervalId); // stop after 10 seconds
+    }, 500);
   </script>
 
   <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
 
 <!-- Swiper JS -->
 <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
