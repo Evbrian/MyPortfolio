@@ -648,17 +648,14 @@ body {
 .chat-input button:hover {
     background: var(--accent);
 }
-/* Hide Google Translate tooltip popup */
-.goog-te-balloon-frame {
-  display: none !important;
-}
+/* Google translate*/
 /* ✅ Hide translation popup bar */
     .goog-te-banner-frame.skiptranslate {
       display: none !important;
     }
-#google_translate_element {
+   #google_translate_element {
       text-align: center;
-      margin-top: 20px;
+      margin: 20px;
     }
     .goog-te-combo {
       padding: 8px 12px;
@@ -668,19 +665,6 @@ body {
       display: block;
     }
 
-    /* Optional: Hide Google Toolbar */
-    .goog-te-banner-frame.skiptranslate,
-    .goog-te-gadget span {
-      display: none !important;
-    }
-    body {
-      top: 0px !important;
-    }
-
-/* Hide banner at top after translation */
-#goog-gt-tt, .goog-te-banner-frame, .goog-te-balloon {
-  display: none !important;
-}
 
 /* ===== Mobile-First Adjustments (max-width: 767px) ===== */
 @media (max-width: 767px) {
