@@ -700,6 +700,13 @@ body {
   font-family: Arial, sans-serif !important;
 }
 
+.goog-te-banner-frame { 
+    display: none !important; 
+  }
+  body { 
+    top: 0 !important; /* Prevents page jump */ 
+  }
+
 /* ✅ Hide top banner */
 .goog-te-banner-frame.skiptranslate {
   display: none !important;
@@ -708,11 +715,6 @@ body {
 /* ✅ Hide bottom right popup after translating */
 iframe[style*="z-index: 999999"] {
   display: none !important;
-}
-
-/* ✅ Remove body top margin caused by banner */
-body {
-  top: 0 !important;
 }
 
 /* ✅ Optional: Responsive styling for mobile */
