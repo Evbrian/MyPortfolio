@@ -649,37 +649,15 @@ body {
     background: var(--accent);
 }
 /* Google translate*/
-     .translate-wrapper {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      height: 100vh;
-    }
-
-    .goog-te-combo {
+goog-te-combo {
       padding: 8px 12px;
       border-radius: 4px;
       border: 1px solid #6c5ce7;
       font-family: Arial, sans-serif;
     }
-
-    /* ✅ Keep "Powered by Google" branding */
-    .goog-logo-link {
-      display: inline !important;
-    }
-
-    .goog-te-gadget span:not(.goog-logo-link) {
-      display: none !important;
-    }
-
     /* ✅ Hide top banner injected via iframe */
     .goog-te-banner-frame.skiptranslate {
       display: none !important;
-    }
-
-    body {
-      top: 0px !important;
     }
 
     /* Hide iframe that shows the "Translated to..." popup */
