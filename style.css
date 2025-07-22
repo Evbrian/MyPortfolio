@@ -649,25 +649,22 @@ body {
     background: var(--accent);
 }
 /* Google translate*/
-    /* Center container */
-    .translate-wrapper {
-      height: 100%;
+     .translate-wrapper {
       display: flex;
       justify-content: center;
       align-items: center;
       flex-direction: column;
+      height: 100vh;
     }
 
-    /* Style the dropdown */
     .goog-te-combo {
       padding: 8px 12px;
       border-radius: 4px;
       border: 1px solid #6c5ce7;
       font-family: Arial, sans-serif;
-      display: block;
     }
 
-    /* ✅ Keep "Powered by Google" */
+    /* ✅ Keep "Powered by Google" branding */
     .goog-logo-link {
       display: inline !important;
     }
@@ -676,18 +673,19 @@ body {
       display: none !important;
     }
 
-    /* ✅ Hide popup bar */
+    /* ✅ Hide top banner injected via iframe */
     .goog-te-banner-frame.skiptranslate {
       display: none !important;
     }
+
     body {
       top: 0px !important;
     }
 
+    /* Hide iframe that shows the "Translated to..." popup */
     iframe[style*="z-index: 999999"] {
       display: none !important;
     }
-
 /* ===== Mobile-First Adjustments (max-width: 767px) ===== */
 @media (max-width: 767px) {
 body { 
