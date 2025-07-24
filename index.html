@@ -141,7 +141,6 @@
                     <button class="filter-btn" data-filter="ict">ICT Solutions</button>
                 </div>
               <div class="projects-carousel-wrapper">
-  <button class="project-nav prev"><i class="fas fa-chevron-left"></i></button>
   <div class="projects-grid" id="projectsCarousel">
                 <div class="projects-grid">
                     <div class="project-card" data-category="web">
@@ -203,9 +202,10 @@
                     </div>
                 </div>
       </div>
-
-  <button class="project-nav next"><i class="fas fa-chevron-right"></i></button>
-</div>
+  <div class="carousel-controls">
+      <button class="prev-btn"><i class="fas fa-chevron-left"></i></button>
+      <button class="next-btn"><i class="fas fa-chevron-right"></i></button>
+    </div></div>
             </section>
 
             <!-- Testimonials Section -->
@@ -409,7 +409,7 @@
     autoSwipeInterval = setInterval(() => {
       currentIndex = (currentIndex + 1) % testimonials.length;
       showTestimonial(currentIndex);
-    }, 2000);
+    }, 3000);
   }
 
   autoSwipeTestimonials();
